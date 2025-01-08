@@ -16,7 +16,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {TestPageComponent} from './test-page/test-page.component';
 import {HomePageComponent} from './home-page/home-page.component';
 
-//  {path:'', component:AppComponent},
 const routes: Routes = [
   {path:'', component:HomePageComponent},
   {path:'testPage/:id', component:TestPageComponent},

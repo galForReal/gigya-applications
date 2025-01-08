@@ -15,6 +15,5 @@ export class IndexGridComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    const x = this.data;
   }
 }
