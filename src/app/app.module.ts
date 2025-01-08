@@ -4,7 +4,7 @@ import {AppComponent} from './app.component';
 import {IndexGridComponent} from './index-grid/index-grid.component';
 import {HttpClientModule} from '@angular/common/http';
 import {
-  AvatarComponent,
+  AvatarComponent, BusyIndicatorModule,
   CardModule,
   GridListModule, IconComponent, LayoutGridModule, ListModule,
   provideTheming, ShellbarModule,
@@ -44,7 +44,8 @@ const routes: Routes = [
     IconComponent,
     RouterModule.forRoot(routes),
     ListModule,
-    LayoutGridModule
+    LayoutGridModule,
+    BusyIndicatorModule
   ],
   providers: [
     provideTheming({
