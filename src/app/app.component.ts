@@ -14,11 +14,11 @@ import {ThemingService} from '@fundamental-ngx/core';
 })
 export class AppComponent {
   title = 'GigyaApplications';
-  protected data$;
+  protected modules$;
 
   constructor(private testService: DataService, private themingService: ThemingService) {
     this.themingService.setTheme('sap_horizon');
-    this.data$ = this.testService.getData();
+    this.modules$ = this.testService.getData();
   }
 
   navigate(){

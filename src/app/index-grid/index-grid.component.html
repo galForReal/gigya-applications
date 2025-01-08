@@ -1,1 +1,9 @@
-<p>index-grid works!</p>
+<ul fd-list fdCompact *ngFor="let item of data">
+    <li fd-list-item>
+<!--      <fd-icon [glyph]="'accessibility'"></fd-icon>-->
+      <div fd-list-title>
+        <a attr.aria-label="{{item.name}}" [routerLink]="['/testPage', item.id]">{{item.name}}</a>
+      </div>
+    </li>
+</ul>
+

@@ -5,20 +5,29 @@ import {IndexGridComponent} from './index-grid/index-grid.component';
 import {HttpClientModule} from '@angular/common/http';
 import {
   AvatarComponent,
-  CardModule,
+  CardModule, FeedListComponent,
   FundamentalNgxCoreModule,
-  GridListModule,
+  GridListModule, IconComponent, ListModule,
   provideTheming, ShellbarModule,
   ThemingModule
 } from '@fundamental-ngx/core';
-import {RouterOutlet} from '@angular/router';
+import {RouterModule, RouterOutlet, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
+import {TestPageComponent} from './test-page/test-page.component';
+import {HomePageComponent} from './home-page/home-page.component';
 
+//  {path:'', component:AppComponent},
+const routes: Routes = [
+  {path:'', component:HomePageComponent},
+  {path:'testPage/:id', component:TestPageComponent},
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexGridComponent
+    HomePageComponent,
+    TestPageComponent,
+    IndexGridComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,12 +38,18 @@ import {BrowserModule} from '@angular/platform-browser';
     ThemingModule,
     HttpClientModule,
     AvatarComponent,
-    ShellbarModule
+    ShellbarModule,
+    IconComponent,
+    RouterModule.forRoot(routes),
+    ListModule
   ],
   providers: [
     provideTheming({
       defaultTheme: 'sap_horizon'
-  }),],
+    }),],
+  exports: [
+    IndexGridComponent
+  ],
 
   bootstrap: [AppComponent]
 })
