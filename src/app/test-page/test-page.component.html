@@ -1,1 +1,24 @@
-<p>test-page works!</p>
+<ng-container *ngIf="gigyaModule$ | async as data">
+
+  <fd-layout-grid>
+    <div fdLayoutGridRow>
+      <div [fdLayoutGridCol]="2">
+        <app-gigya-screen-instructions [instructions]="data.instructions"></app-gigya-screen-instructions>
+      </div>
+
+      <div [fdLayoutGridCol]="1" class="sep"></div>
+      <div [fdLayoutGridCol]="8">
+        <app-gigya-screen-set [apiKey]="data.apiKey"
+          [screenSet]="data.screenSet"
+          [startScreen]="data.startScreen"
+          [environment]="data.environment"
+        ></app-gigya-screen-set>
+      </div>
+    </div>
+  </fd-layout-grid>
+
+
+
+
+
+</ng-container>

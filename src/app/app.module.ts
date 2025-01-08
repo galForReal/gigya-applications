@@ -5,9 +5,8 @@ import {IndexGridComponent} from './index-grid/index-grid.component';
 import {HttpClientModule} from '@angular/common/http';
 import {
   AvatarComponent,
-  CardModule, FeedListComponent,
-  FundamentalNgxCoreModule,
-  GridListModule, IconComponent, ListModule,
+  CardModule,
+  GridListModule, IconComponent, LayoutGridModule, ListModule,
   provideTheming, ShellbarModule,
   ThemingModule
 } from '@fundamental-ngx/core';
@@ -15,6 +14,8 @@ import {RouterModule, RouterOutlet, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
 import {TestPageComponent} from './test-page/test-page.component';
 import {HomePageComponent} from './home-page/home-page.component';
+import {GigyaScreenSetComponent} from './gigya-screen-set/gigya-screen-set.component';
+import {GigyaScreenInstructionsComponent} from './gigya-screen-instructions/gigya-screen-instructions.component';
 
 const routes: Routes = [
   {path:'', component:HomePageComponent},
@@ -27,6 +28,8 @@ const routes: Routes = [
     HomePageComponent,
     TestPageComponent,
     IndexGridComponent,
+    GigyaScreenSetComponent,
+    GigyaScreenInstructionsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ const routes: Routes = [
     ShellbarModule,
     IconComponent,
     RouterModule.forRoot(routes),
-    ListModule
+    ListModule,
+    LayoutGridModule
   ],
   providers: [
     provideTheming({

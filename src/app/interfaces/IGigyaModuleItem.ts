@@ -2,7 +2,7 @@
 export interface IGigyaModuleItem {
   id: string,
   name: string,
-  steps: string,
+  instructions: string,
   description: string,
   apiKey: string,
   screenSet: string,
