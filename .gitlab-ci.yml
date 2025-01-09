@@ -1,0 +1,37 @@
+image: node:18.20.5
+
+stages:
+  - build
+  - deploy
+
+# Variables
+variables:
+  ANGULAR_CLI_VERSION: 18.2.0  # Replace with your desired Angular CLI version
+  BUILD_DIR: dist # Update to match your Angular app's output directory
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install -g @angular/cli@$ANGULAR_CLI_VERSION
+  - npm ci
+
+build:
+  stage: build
+  script:
+    - ng build --configuration production
+  artifacts:
+    paths:
+      - $BUILD_DIR
+    expire_in: 1 week
+
+pages:
+  stage: deploy
+  script:
+    - mv $BUILD_DIR public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master  # Replace with the branch you want to deploy
