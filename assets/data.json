@@ -1,0 +1,61 @@
+[
+  {
+    "id": "1",
+    "name": "Register with email",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User <p> should see checkmark on the right side of the email field indicating valid input",
+      {
+        "text": "launch",
+        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
+        "screenSet": "Default-ProfileUpdate"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
+    "screenSet": "Default-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
+    "environment": "us1"
+  },
+  {
+    "id": "2",
+    "name": "Register and complete missing fields",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User <p> should see checkmark on the right side of the email field indicating valid input",
+      {
+        "text": "launch",
+        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
+        "screenSet": "Default-ProfileUpdate"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+
+    "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
+    "screenSet": "Default-RegistrationLogin",
+    "startScreen": "gigya-register-screen",
+    "environment": "us1"
+  },
+  {
+    "id": "3",
+    "name": "Register to TFA with SMS",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User <p> should see checkmark on the right side of the email field indicating valid input",
+      {
+        "text": "launch",
+        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
+        "screenSet": "Default-ProfileUpdate"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+
+    "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
+    "screenSet": "Default-ProfileUpdate",
+    "startScreen": "",
+    "environment": "us1"
+  }
+]
