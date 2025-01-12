@@ -15,29 +15,38 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Checkout Code
+        uses: actions/checkout@v2
         with:
-          # Upload entire repository
-          path: '.'
+          ref: main  # Make sure it's pointing to the correct branch for deployment
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.20.5
+
+      - name: Angular Dependencies
+        run: npm install
+
+      - name: Install Angular CLI
+        run: |
+          npm install @angular/cli
+
+      - name: Build Angular Project
+        run: npm run build -- --base-href="/gigya-applications/"
+
+      - name: Debug GitHub Pages Deploy
+        run: |
+              echo "Current branch: $(git branch --show-current)"
+              echo "GitHub Token: ${{ secrets.GITHUB_TOKEN }}"
+              ls -la ./dist
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./dist
