@@ -1,4 +1,4 @@
-import {Component, Inject, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnChanges, OnInit} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 
 
@@ -16,7 +16,7 @@ export class _Window extends Window{
   styleUrl: './gigya-screen-set.component.css'
 })
 
-export class GigyaScreenSetComponent implements OnInit {
+export class GigyaScreenSetComponent implements OnChanges {
   @Input() apiKey?: string;
   @Input() screenSet?: string;
   @Input() startScreen?: string;
@@ -27,7 +27,7 @@ export class GigyaScreenSetComponent implements OnInit {
     this.globalWindow = document.defaultView;
   }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     this.loadScript();
 
     if(this.globalWindow) {
@@ -58,7 +58,10 @@ export class GigyaScreenSetComponent implements OnInit {
     let script: HTMLElement | null;
 
     script = document.getElementById('gigya-id');
-    if (!script) {
+    if(script){
+      script.remove();
+    }
+    //else (!script) {
       let node = document.createElement('script');
       node.src = `https://cdns.${this.environment}.gigya.com/js/gigya.js?apikey=${this.apiKey}`;
       node.type = 'text/javascript';
@@ -66,9 +69,11 @@ export class GigyaScreenSetComponent implements OnInit {
       node.charset = 'utf-8';
       node.id = "gigya-id";
       document.getElementsByTagName('head')[0].appendChild(node);
-    } else {
-      script.setAttribute('src', `https://cdns.${this.environment}.gigya.com/js/gigya.js?apikey=${this.apiKey}`)
-    }
+    //}
+
+    // else {
+    //   script.setAttribute('src', `https://cdns.${this.environment}.gigya.com/js/gigya.js?apikey=${this.apiKey}`)
+    // }
   }
 
 

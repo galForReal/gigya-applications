@@ -8,8 +8,8 @@
       "Type a valid email User <p> should see checkmark on the right side of the email field indicating valid input",
       {
         "text": "launch",
-        "apiKey": "dawdaw2342",
-        "screenSet": "Default-RegistrationLogin"
+        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
+        "screenSet": "Default-ProfileUpdate"
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
@@ -27,8 +27,8 @@
       "Type a valid email User <p> should see checkmark on the right side of the email field indicating valid input",
       {
         "text": "launch",
-        "apiKey": "dawdaw2342",
-        "screenSet": "Default-RegistrationLogin"
+        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
+        "screenSet": "Default-ProfileUpdate"
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
@@ -47,8 +47,8 @@
       "Type a valid email User <p> should see checkmark on the right side of the email field indicating valid input",
       {
         "text": "launch",
-        "apiKey": "dawdaw2342",
-        "screenSet": "Default-RegistrationLogin"
+        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
+        "screenSet": "Default-ProfileUpdate"
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
