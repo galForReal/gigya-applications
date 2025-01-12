@@ -47,6 +47,5 @@ jobs:
               ls -la ./dist
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: ./dist
+        id: deployment
+        uses: actions/deploy-pages@v4
