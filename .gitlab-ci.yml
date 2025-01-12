@@ -20,7 +20,7 @@ before_script:
 build:
   stage: build
   script:
-    - ng build --configuration production
+    - ng build --configuration production --base-href="/gigya-applications/"
   artifacts:
     paths:
       - $BUILD_DIR
