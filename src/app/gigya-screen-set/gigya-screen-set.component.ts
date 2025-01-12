@@ -71,6 +71,7 @@ export class GigyaScreenSetComponent implements OnChanges {
       document.getElementsByTagName('head')[0].appendChild(node);
     //}
 
+
     // else {
     //   script.setAttribute('src', `https://cdns.${this.environment}.gigya.com/js/gigya.js?apikey=${this.apiKey}`)
     // }
