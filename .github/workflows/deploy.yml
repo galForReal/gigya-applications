@@ -43,7 +43,7 @@ jobs:
       - name: Debug GitHub Pages Deploy
         run: |
               echo "Current branch: $(git branch --show-current)"
-              echo "GitHub Token: ${{ secrets.GITHUB_TOKEN }}"
+              echo "GitHub Token: ${{ secrets.GH_TOKEN }}"
               ls -la ./dist
 
       - name: Deploy to GitHub Pages
