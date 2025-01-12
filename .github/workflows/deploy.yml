@@ -20,7 +20,6 @@ jobs:
 
       - name: Install Dependencies and Angular CLI
         run: |
-          npm set fetch-retries 3
           npm ci
           npm install @angular/cli
 
