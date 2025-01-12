@@ -34,4 +34,4 @@ pages:
     paths:
       - public
   only:
-    - master  # Replace with the branch you want to deploy
+    - main  # Replace with the branch you want to deploy
