@@ -24,7 +24,7 @@ jobs:
           npm install @angular/cli
 
       - name: Build Angular Project
-        run: npm run build -- --base-href="/gigya-applications/"
+        run: npx ng build --base-href="/gigya-applications/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
