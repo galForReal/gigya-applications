@@ -18,10 +18,12 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Dependencies
+      - name: Install Dependencies and Angular CLI
         run: |
-          npm install
+          npm set fetch-retries 3
+          npm ci
           npm install @angular/cli
+
 
       - name: Build Angular Project
         run: ng build
