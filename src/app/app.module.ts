@@ -19,7 +19,7 @@ import {GigyaScreenInstructionsComponent} from './gigya-screen-instructions/gigy
 
 const routes: Routes = [
   {path:'', component:HomePageComponent},
-  {path:'testPage/:id', component:TestPageComponent},
+  {path:'testPage', component:TestPageComponent},
 ];
 
 @NgModule({

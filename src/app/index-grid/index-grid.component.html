@@ -1,7 +1,7 @@
 <ul fd-list fdCompact *ngFor="let item of data">
     <li fd-list-item>
       <div fd-list-title>
-        <a attr.aria-label="{{item.name}}" [routerLink]="['/testPage', item.id]">{{item.name}}</a>
+        <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}}</a>
       </div>
     </li>
 </ul>

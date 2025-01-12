@@ -1,6 +1,16 @@
 <section class="acc-list" aria-labelledby="list-title"  aria-describedby="list-description">
   <h2 class="list-title" aria-describedby="list-steps">Instructions</h2>
-  <div id="list-description" class="bullet-container" [innerHTML]="instructions">
+  <div *ngFor="let item of instructions">
+    <ng-container *ngIf="isString(item);">
+      <div [innerHTML]="item"></div>
+    </ng-container>
+    <ng-container *ngIf="!isString(item)">
+      <a routerLink="." [queryParams]="{api: item.apiKey, screen: item.screenSet, start: item.startScreen}">{{ item.text }}</a>
+    </ng-container>
   </div>
 </section>
+
+
+
+
 

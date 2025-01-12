@@ -10,7 +10,7 @@ import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
   styleUrl: './test-page.component.css'
 })
 export class TestPageComponent {
-  protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.testService.getTestById(this.route.snapshot.paramMap.get('id'));
+  protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.testService.getTestById(this.route.snapshot.queryParamMap.get('id'));
 
   constructor(private route: ActivatedRoute, private testService: DataService) {
   }
