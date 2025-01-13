@@ -6,7 +6,8 @@ export interface IGigyaModuleItem {
   apiKey: string,
   screenSet: string,
   startScreen?: string,
-  environment: string
+  environment: string,
+  languages?: string[]
 }
 
 export interface ILinkInformation {

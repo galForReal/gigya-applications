@@ -29,12 +29,30 @@
 </fd-toolbar>
 
 
-<ul fd-list fdCompact *ngFor="let item of displayData">
-    <li fd-list-item>
-        <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}}</a>
-      <div fd-list-title>
-        <button fd-button fdType="emphasized" fdCompact label="Standard Button"></button>
-      </div>
-    </li>
-</ul>
+<fd-layout-grid>
+  <div fdLayoutGridRow>
+    <ul fd-list fdCompact *ngFor="let item of displayData">
+      <li fd-list-item>
+        <div [fdLayoutGridCol]="4">
+          <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}}</a>
+        </div>
+        <div [fdLayoutGridCol]="4">
+          <button fd-button fdType="ghost" fdCompact label="HE" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: 'he' }"></button>
+          <button fd-button fdType="ghost" fdCompact label="EN"></button>
+          <button fd-button fdType="ghost" fdCompact label="AR"></button>
+          <button fd-button fdType="attention" fdCompact label="FR"></button>
+          <button fd-button fdType="attention" fdCompact label="GR"></button>
+        </div>
+      </li>
+    </ul>
+<!--    <div >-->
+<!--      <example-layout-grid-block>Size: 5</example-layout-grid-block>-->
+<!--    </div>-->
+<!--    <div fdLayoutGridCol colGrow>-->
+<!--      <example-layout-grid-block>Growing column</example-layout-grid-block>-->
+<!--    </div>-->
+  </div>
+</fd-layout-grid>
+
+
 
