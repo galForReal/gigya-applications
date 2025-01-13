@@ -10,10 +10,11 @@ export interface IGigyaModuleItem {
 }
 
 export interface ILinkInformation {
-  text:string;
+  linkText:string;
   screenSet: string,
   startScreen?: string,
-  additionalText?: string
+  preLinkText?: string
+  postLinkText?: string
 }
 
 

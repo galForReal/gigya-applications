@@ -5,7 +5,7 @@
       <div [innerHTML]="item"></div>
     </ng-container>
     <ng-container *ngIf="!isString(item)">
-      <a routerLink="." queryParamsHandling="merge" [queryParams]="{screenSet: item.screenSet, startScreen: item.startScreen || undefined}">{{ item.text }}</a><span>{{item.additionalText}}</span>
+      <span>{{item.preLinkText}} </span> <a routerLink="." queryParamsHandling="merge" [queryParams]="{screenSet: item.screenSet, startScreen: item.startScreen || undefined}">{{ item.linkText }}</a>  <span> {{item.postLinkText}}</span>
     </ng-container>
   </div>
 </section>
