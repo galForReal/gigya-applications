@@ -1,7 +1,39 @@
-<ul fd-list fdCompact *ngFor="let item of data">
+<fd-toolbar>
+  <label fd-toolbar-label> Filter for list elements </label>
+  <fd-toolbar-spacer></fd-toolbar-spacer>
+  <fd-input-group
+    glyph="decline"
+    glyphAriaLabel="Clear"
+    placeholder="Search"
+    fdCozy
+    [button]="true"
+    [disabled]="false"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="handleSearchTermChange($event)"
+  >
+  </fd-input-group>
+<!--  <button-->
+<!--    ariaLabel="Sort ascending"-->
+<!--    title="Sort ascending"-->
+<!--    fd-button-->
+<!--    glyph="sort-ascending"-->
+<!--    (click)="changeSort(true)"-->
+<!--  ></button>-->
+<!--  <button-->
+<!--    ariaLabel="Sort descending"-->
+<!--    title="Sort descending"-->
+<!--    fd-button-->
+<!--    glyph="sort-descending"-->
+<!--    (click)="changeSort(false)"-->
+<!--  ></button>-->
+</fd-toolbar>
+
+
+<ul fd-list fdCompact *ngFor="let item of displayData">
     <li fd-list-item>
-      <div fd-list-title>
         <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}}</a>
+      <div fd-list-title>
+        <button fd-button fdType="emphasized" fdCompact label="Standard Button"></button>
       </div>
     </li>
 </ul>

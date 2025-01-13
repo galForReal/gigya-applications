@@ -6,9 +6,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {
   AvatarComponent, BusyIndicatorModule,
   CardModule,
-  GridListModule, IconComponent, LayoutGridModule, ListModule,
+  GridListModule, IconComponent, LayoutGridModule, ListModule, ToolbarModule, ButtonComponent,
   provideTheming, ShellbarModule,
-  ThemingModule
+  ThemingModule, InputGroupModule
 } from '@fundamental-ngx/core';
 import {RouterModule, RouterOutlet, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
@@ -16,6 +16,7 @@ import {TestPageComponent} from './test-page/test-page.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {GigyaScreenSetComponent} from './gigya-screen-set/gigya-screen-set.component';
 import {GigyaScreenInstructionsComponent} from './gigya-screen-instructions/gigya-screen-instructions.component';
+import {FormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {path:'', component:HomePageComponent},
@@ -45,7 +46,12 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ListModule,
     LayoutGridModule,
-    BusyIndicatorModule
+    BusyIndicatorModule,
+    ToolbarModule,
+    InputGroupModule,
+    ButtonComponent,
+    FormsModule,
+
   ],
   providers: [
     provideTheming({

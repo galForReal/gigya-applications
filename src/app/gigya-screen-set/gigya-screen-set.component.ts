@@ -31,13 +31,11 @@ export class GigyaScreenSetComponent implements OnChanges {
 
     if(this.globalWindow) {
       if (this.globalWindow.gigya){
-        setTimeout(()=> {
-          gigya.accounts.showScreenSet({
-            containerID:'containerId',
-            screenSet: this.screenSet,
-            ...( this.startScreen && { startScreen: this.startScreen}),
-          });
-        },2000)
+        gigya.accounts.showScreenSet({
+          containerID:'containerId',
+          screenSet: this.screenSet,
+          ...( this.startScreen && { startScreen: this.startScreen}),
+        });
       }
       else {
         this.globalWindow.onGigyaServiceReady = () => {
