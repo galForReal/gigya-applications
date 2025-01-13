@@ -1,14 +1,13 @@
 [
   {
     "id": "1",
-    "name": "Register with email",
+    "name": "Login with email",
     "description": "simple flow",
     "instructions": [
       "Launch screen",
       "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
       {
         "linkText": "launch",
-        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
         "screenSet": "Default-ProfileUpdate",
         "postLinkText": "this site"
       },
@@ -16,6 +15,7 @@
     ],
     "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
     "screenSet": "Default-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
     "environment": "us1"
   },
   {
@@ -27,18 +27,17 @@
       "Type a valid email, User should see checkmark on the right side of the email field indicating valid input",
       {
         "linkText": "launch",
-        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
         "screenSet": "Default-Subscriptions",
         "preLinkText": "please",
         "postLinkText": "this site"
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
-
     "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
     "screenSet": "Default-RegistrationLogin",
     "startScreen": "gigya-register-screen",
-    "environment": "us1"
+    "environment": "us1",
+    "languages": [{"key":"Hindi", "value": "hi"}]
   },
   {
     "id": "3",
@@ -55,10 +54,13 @@
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
-
     "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
     "screenSet": "Default-ProfileUpdate",
     "startScreen": "",
-    "environment": "us1"
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   }
 ]

@@ -20,7 +20,6 @@ export class TestPageComponent implements OnInit{
 
   ngOnInit(): void {}
 
-
   getDisplayParams(): Observable<IGigyaModuleItem> {
     const dataParams$ = this.testService.getTestById(this.route.snapshot.queryParamMap.get('id'));
     const routeParams$ = this.route.queryParams;
@@ -36,6 +35,7 @@ export class TestPageComponent implements OnInit{
             instructions: data?.instructions,
             screenSet: routeParams['screenSet'] || data?.screenSet,
             ...(startScreen && { startScreen: startScreen}),
+            ...(routeParams['lang'] && { selectedLang: routeParams['lang']}),
           } as IGigyaModuleItem
         })
       );

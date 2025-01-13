@@ -12,20 +12,6 @@
     (ngModelChange)="handleSearchTermChange($event)"
   >
   </fd-input-group>
-<!--  <button-->
-<!--    ariaLabel="Sort ascending"-->
-<!--    title="Sort ascending"-->
-<!--    fd-button-->
-<!--    glyph="sort-ascending"-->
-<!--    (click)="changeSort(true)"-->
-<!--  ></button>-->
-<!--  <button-->
-<!--    ariaLabel="Sort descending"-->
-<!--    title="Sort descending"-->
-<!--    fd-button-->
-<!--    glyph="sort-descending"-->
-<!--    (click)="changeSort(false)"-->
-<!--  ></button>-->
 </fd-toolbar>
 
 
@@ -37,19 +23,16 @@
           <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} </a>(english)
         </div>
         <div [fdLayoutGridCol]="4">
-          <button fd-button fdType="ghost" fdCompact label="HE" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: 'he' }"></button>
-          <button fd-button fdType="ghost" fdCompact label="FR"></button>
-          <button fd-button fdType="ghost" fdCompact label="AR"></button>
-          <button fd-button fdType="attention" fdCompact label="GR"></button>
+          @for (lang of defaultLanguages; track lang; let  i = $index) {
+            <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value }"></button>
+          }
+
+          @for (lang of item?.languages ; track lang; let  i = $index) {
+            <button fd-button fdType="attention" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value }"></button>
+          }
         </div>
       </li>
     </ul>
-<!--    <div >-->
-<!--      <example-layout-grid-block>Size: 5</example-layout-grid-block>-->
-<!--    </div>-->
-<!--    <div fdLayoutGridCol colGrow>-->
-<!--      <example-layout-grid-block>Growing column</example-layout-grid-block>-->
-<!--    </div>-->
   </div>
 </fd-layout-grid>
 

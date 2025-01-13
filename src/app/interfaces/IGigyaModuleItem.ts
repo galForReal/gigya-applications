@@ -1,3 +1,5 @@
+import {KeyValue} from '@angular/common';
+
 export interface IGigyaModuleItem {
   id: string,
   name: string,
@@ -7,7 +9,8 @@ export interface IGigyaModuleItem {
   screenSet: string,
   startScreen?: string,
   environment: string,
-  languages?: string[]
+  languages: KeyValue<string, string>[] | undefined,
+  selectedLang: string | undefined
 }
 
 export interface ILinkInformation {

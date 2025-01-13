@@ -20,6 +20,7 @@ export class GigyaScreenSetComponent implements OnChanges {
   @Input() screenSet?: string;
   @Input() startScreen?: string;
   @Input() environment?: string;
+  @Input() lang?: string;
   globalWindow: any;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
@@ -34,7 +35,8 @@ export class GigyaScreenSetComponent implements OnChanges {
         gigya.accounts.showScreenSet({
           containerID:'containerId',
           screenSet: this.screenSet,
-          ...( this.startScreen && { startScreen: this.startScreen}),
+          ...(this.startScreen && { startScreen: this.startScreen}),
+          ...(this.lang && { 'lang': this.lang})
         });
       }
       else {
@@ -42,7 +44,8 @@ export class GigyaScreenSetComponent implements OnChanges {
           gigya.accounts.showScreenSet({
             containerID: 'containerId',
             screenSet: this.screenSet,
-            ...this.startScreen  && { 'startScreen': this.startScreen},
+            ...(this.startScreen && { 'startScreen': this.startScreen}),
+            ...(this.lang && { 'lang': this.lang})
           });
         };
       }
