@@ -34,13 +34,12 @@
     <ul fd-list fdCompact *ngFor="let item of displayData">
       <li fd-list-item>
         <div [fdLayoutGridCol]="4">
-          <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}}</a>
+          <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} </a>(english)
         </div>
         <div [fdLayoutGridCol]="4">
           <button fd-button fdType="ghost" fdCompact label="HE" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: 'he' }"></button>
-          <button fd-button fdType="ghost" fdCompact label="EN"></button>
+          <button fd-button fdType="ghost" fdCompact label="FR"></button>
           <button fd-button fdType="ghost" fdCompact label="AR"></button>
-          <button fd-button fdType="attention" fdCompact label="FR"></button>
           <button fd-button fdType="attention" fdCompact label="GR"></button>
         </div>
       </li>
