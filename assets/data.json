@@ -9,13 +9,13 @@
       {
         "text": "launch",
         "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
-        "screenSet": "Default-ProfileUpdate"
+        "screenSet": "Default-ProfileUpdate",
+        "additionalText": "this site"
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
     "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
     "screenSet": "Default-RegistrationLogin",
-    "startScreen": "gigya-login-screen",
     "environment": "us1"
   },
   {
@@ -28,7 +28,7 @@
       {
         "text": "launch",
         "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
-        "screenSet": "Default-ProfileUpdate"
+        "screenSet": "Default-Subscriptions"
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
@@ -47,8 +47,9 @@
       "Type a valid email User <p> should see checkmark on the right side of the email field indicating valid input",
       {
         "text": "launch",
-        "apiKey": "4_WcgvAV3Kjp47F8Kp4n307g",
-        "screenSet": "Default-ProfileUpdate"
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "additionalText": "this site"
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
