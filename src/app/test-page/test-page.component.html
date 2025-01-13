@@ -1,7 +1,7 @@
 <ng-container *ngIf="gigyaModule$ | async as data">
   <fd-layout-grid>
     <div fdLayoutGridRow>
-      <div [fdLayoutGridCol]="2">
+      <div [fdLayoutGridCol]="3">
         <app-gigya-screen-instructions [instructions]="data.instructions"></app-gigya-screen-instructions>
       </div>
       <div [fdLayoutGridCol]="1" class="sep"></div>

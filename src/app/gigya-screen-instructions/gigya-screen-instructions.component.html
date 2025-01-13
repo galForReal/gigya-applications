@@ -1,13 +1,18 @@
-<section class="acc-list" aria-labelledby="list-title"  aria-describedby="list-description">
+<section class="acc-list" aria-labelledby="list-title" aria-describedby="list-description">
   <h2 class="list-title" aria-describedby="list-steps">Instructions</h2>
-  <div *ngFor="let item of instructions">
-    <ng-container *ngIf="isString(item);">
-      <div [innerHTML]="item"></div>
-    </ng-container>
-    <ng-container *ngIf="!isString(item)">
-      <span>{{item.preLinkText}} </span> <a routerLink="." queryParamsHandling="merge" [queryParams]="{screenSet: item.screenSet, startScreen: item.startScreen || undefined}">{{ item.linkText }}</a>  <span> {{item.postLinkText}}</span>
-    </ng-container>
-  </div>
+  <ul fd-list fdCompact>
+    @for (item of instructions; track item; let  i = $index) {
+      <li fd-list-item >
+        <span class="line-number">{{i+1}}</span>
+        <div *ngIf="isString(item);" fd-list-title [innerHTML]="item"></div>
+        <div *ngIf="!isString(item)" fd-list-title>
+          <span>{{ item.preLinkText }} </span>
+          <a routerLink="." queryParamsHandling="merge" [queryParams]="{screenSet: item.screenSet, startScreen: item.startScreen || undefined}">{{ item.linkText }}</a>
+          <span> {{ item.postLinkText }}</span>
+        </div>
+      </li>
+    }
+  </ul>
 </section>
 
 
