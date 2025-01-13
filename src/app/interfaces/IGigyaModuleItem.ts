@@ -11,9 +11,9 @@ export interface IGigyaModuleItem {
 
 export interface ILinkInformation {
   text:string;
-  apiKey: string,
   screenSet: string,
-  startScreen: string,
+  startScreen?: string,
+  additionalText?: string
 }
 
 

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {map, Observable} from 'rxjs';
-import {ActivatedRoute} from '@angular/router';
+import {combineLatest, map, Observable} from 'rxjs';
+import {ActivatedRoute, Params} from '@angular/router';
 import {DataService} from '../services/data.service';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 
@@ -10,7 +10,7 @@ import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
   styleUrl: './test-page.component.css'
 })
 export class TestPageComponent implements OnInit{
-  protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.testService.getTestById(this.route.snapshot.queryParamMap.get('id'));
+  protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.getDisplayParams();
   protected apikey: string | undefined;
   protected screenSet: string | undefined;
   protected startScreen: string | undefined;
@@ -18,11 +18,33 @@ export class TestPageComponent implements OnInit{
   constructor(private route: ActivatedRoute, private testService: DataService) {
   }
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe((params) => {
-      this.apikey = params['apiKey'] ?? undefined;
-      this.screenSet = params['screenSet'] ?? undefined;
-      this.startScreen = params['startScreen'] ?? undefined;
-    });
+  ngOnInit(): void {}
+
+
+  getDisplayParams(): Observable<IGigyaModuleItem> {
+    const dataParams$ = this.testService.getTestById(this.route.snapshot.queryParamMap.get('id'));
+    const routeParams$ = this.route.queryParams;
+
+    return combineLatest([dataParams$, routeParams$])
+      .pipe(
+        map(([data, routeParams]) => {
+          const startScreen = this.getStartScreen(data, routeParams);
+          return {
+            id: data?.id,
+            apiKey: data?.apiKey,
+            environment: data?.environment,
+            instructions: data?.instructions,
+            screenSet: routeParams['screenSet'] || data?.screenSet,
+            ...(startScreen && { startScreen: startScreen}),
+          } as IGigyaModuleItem
+        })
+      );
+  }
+
+  getStartScreen(data: any, routeParams: any): string | undefined{
+    if(routeParams['screenSet'])
+      return routeParams['startScreen'] ?? undefined;
+    else
+      return data?.startScreen ?? undefined
   }
 }

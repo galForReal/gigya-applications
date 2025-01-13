@@ -7,10 +7,10 @@
       <div [fdLayoutGridCol]="1" class="sep"></div>
       <div [fdLayoutGridCol]="6">
         <app-gigya-screen-set
-          [apiKey]="apikey || data.apiKey"
-          [screenSet]="screenSet || data.screenSet"
-          [startScreen]="startScreen || data.startScreen"
+          [apiKey]="data.apiKey"
           [environment]="data.environment"
+          [screenSet]="data.screenSet"
+          [startScreen]="data.startScreen"
         ></app-gigya-screen-set>
       </div>
     </div>
