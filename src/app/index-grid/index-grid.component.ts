@@ -10,7 +10,7 @@ import {DefaultLanguages} from '../constants/consts';
 })
 export class IndexGridComponent implements OnInit{
   @Input() data: IGigyaModuleItem[] | undefined;
-  searchTerm: string | undefined;
+
   displayData:IGigyaModuleItem[] | undefined;
   defaultLanguages = DefaultLanguages;
 
@@ -19,12 +19,5 @@ export class IndexGridComponent implements OnInit{
 
   ngOnInit(): void {
     this.displayData = this.data;
-  }
-
-  handleSearchTermChange(searchTerm: string) {
-    if(searchTerm.length)
-      this.displayData = this.displayData?.filter((item) => item.name.toLowerCase().includes(searchTerm));
-    else
-      this.displayData = this.data;
   }
 }

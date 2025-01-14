@@ -1,20 +1,3 @@
-<fd-toolbar>
-  <label fd-toolbar-label> Filter for list elements </label>
-  <fd-toolbar-spacer></fd-toolbar-spacer>
-  <fd-input-group
-    glyph="decline"
-    glyphAriaLabel="Clear"
-    placeholder="Search"
-    fdCozy
-    [button]="true"
-    [disabled]="false"
-    [(ngModel)]="searchTerm"
-    (ngModelChange)="handleSearchTermChange($event)"
-  >
-  </fd-input-group>
-</fd-toolbar>
-
-
 <fd-layout-grid>
   <div fdLayoutGridRow>
     <ul fd-list fdCompact *ngFor="let item of displayData">
