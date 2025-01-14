@@ -34,6 +34,7 @@ export class TestPageComponent implements OnInit{
             screenSet: routeParams['screenSet'] || data?.screenSet,
             ...(startScreen && { startScreen: startScreen}),
             ...(routeParams['lang'] && routeParams['lang'] != 'en' && { selectedLang: routeParams['lang']}),
+            ...(routeParams['popup'] && { popup: routeParams['popup']}),
           } as IGigyaModuleItem
         })
       );

@@ -4,19 +4,18 @@
       <li fd-list-item >
         <div [fdLayoutGridCol]="3">
 <!--          <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} (English)</a>-->
-          <label fd-list-title>{{item.name}}</label>
+          <label fd-list-title>{{item.id}}. {{item.name}}</label>
         </div>
         <div [fdLayoutGridCol]="1">
-          <fd-switch activeText="off" inactiveText="pop"></fd-switch>
+          <fd-switch fdCompact [(ngModel)]="item.popup" activeText="pop" inactiveText="pop"></fd-switch>
         </div>
 
         <div fdLayoutGridCol colGrow>
-          @for (lang of defaultLanguages; track lang; let  i = $index) {
-            <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value }"></button>
+          @for (lang of defaultLanguages; track lang;) {
+            <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
           }
-
-          @for (lang of item?.languages ; track lang; let  i = $index) {
-            <button fd-button fdType="attention" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value }"></button>
+          @for (lang of item?.languages ; track lang;) {
+            <button fd-button fdType="attention" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
           }
         </div>
       </li>

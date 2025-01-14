@@ -6,9 +6,7 @@
 </fd-toolbar>
 
 
-
-
-  <fd-layout-grid>
+ <fd-layout-grid>
     <div fdLayoutGridRow>
       <div [fdLayoutGridCol]="3">
         <app-gigya-screen-instructions [instructions]="data.instructions"></app-gigya-screen-instructions>
@@ -21,6 +19,7 @@
           [screenSet]="data.screenSet"
           [startScreen]="data.startScreen"
           [lang]="data?.selectedLang"
+          [popup]="data?.popup"
         ></app-gigya-screen-set>
       </div>
     </div>

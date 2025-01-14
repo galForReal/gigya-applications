@@ -21,6 +21,7 @@ export class GigyaScreenSetComponent implements OnChanges {
   @Input() startScreen?: string;
   @Input() environment?: string;
   @Input() lang?: string;
+  @Input() popup?: boolean;
   globalWindow: any;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
@@ -33,7 +34,7 @@ export class GigyaScreenSetComponent implements OnChanges {
     if(this.globalWindow) {
       if (this.globalWindow.gigya){
         gigya.accounts.showScreenSet({
-          containerID:'containerId',
+          ...(!this.popup && { containerID: 'containerId'}),
           screenSet: this.screenSet,
           ...(this.startScreen && { startScreen: this.startScreen}),
           ...(this.lang && { 'lang': this.lang})
@@ -42,7 +43,7 @@ export class GigyaScreenSetComponent implements OnChanges {
       else {
         this.globalWindow.onGigyaServiceReady = () => {
           gigya.accounts.showScreenSet({
-            containerID: 'containerId',
+            ...(!this.popup && { containerID: 'containerId'}),
             screenSet: this.screenSet,
             ...(this.startScreen && { 'startScreen': this.startScreen}),
             ...(this.lang && { 'lang': this.lang})
@@ -50,6 +51,16 @@ export class GigyaScreenSetComponent implements OnChanges {
         };
       }
     }
+  }
+
+  showScreenSet(){
+    gigya.accounts.showScreenSet({
+      ...(!this.popup && { containerID: 'containerId'}),
+      containerID:'containerId',
+      screenSet: this.screenSet,
+      ...(this.startScreen && { startScreen: this.startScreen}),
+      ...(this.lang && { 'lang': this.lang})
+    });
   }
 
 

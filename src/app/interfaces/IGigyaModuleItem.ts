@@ -10,7 +10,8 @@ export interface IGigyaModuleItem {
   startScreen?: string,
   environment: string,
   languages: KeyValue<string, string>[] | undefined,
-  selectedLang: string | undefined
+  selectedLang: string | undefined,
+  popup: boolean
 }
 
 export interface ILinkInformation {
