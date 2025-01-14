@@ -18,7 +18,7 @@ export class AppComponent {
 
   constructor(private testService: DataService, private themingService: ThemingService) {
     this.themingService.setTheme('sap_horizon');
-    this.modules$ = this.testService.getData();
+    this.modules$ = this.testService.data;
   }
 
   navigate(){

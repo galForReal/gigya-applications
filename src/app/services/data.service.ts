@@ -8,18 +8,28 @@ import {map, Observable} from "rxjs";
 })
 export class DataService {
   private dataUrl = 'assets/data.json';
+  readonly _data:Observable<IGigyaModuleItem[]> = this.fetchData();
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
-  getData(): Observable<IGigyaModuleItem[]> {
+  private fetchData(): Observable<IGigyaModuleItem[]> {
     return this.http.get<any[]>(this.dataUrl);
   }
-
-  getTestById(id: string | null): Observable<IGigyaModuleItem | undefined> {
-    return this.getData()
+  get data():Observable<IGigyaModuleItem[]> {
+    return this._data;
+  }
+  public getTestById(id: string | null): Observable<IGigyaModuleItem | undefined> {
+    return this.data
       .pipe(
         map(results => results.find(test => test.id === id))
       );
+  }
+  public filterDataByName(searchTerm: string):Observable<IGigyaModuleItem[]>{
+    if(searchTerm?.length <= 1){
+      return this._data;
+    }
+
+    return this._data.pipe(
+      map(array => array.filter((item) => item.name.toLowerCase().includes(searchTerm))));
   }
 }

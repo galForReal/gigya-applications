@@ -10,23 +10,15 @@ import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
-  protected modules$ =  this.testService.getData();
   protected data$: Observable<IGigyaModuleItem[]>;
   searchTerm: string | undefined;
 
-  constructor(private router: Router, private testService: DataService) {
-    this.data$ = this.modules$;
+  constructor(private router: Router, private dataService: DataService) {
+    this.data$ = this.dataService.data;
   }
 
   public handleSearchTermChange(searchTerm: string) {
-    if(searchTerm?.length <= 1){
-      this.data$ = this.modules$;
-      return;
-    }
-
-    this.data$ = this.modules$.pipe(
-        map(array => array.filter((item) => item.name.toLowerCase().includes(searchTerm))
-      ));
+    this.dataService.filterDataByName(searchTerm);
   }
 
 

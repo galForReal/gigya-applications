@@ -4,8 +4,8 @@
     @for (item of instructions; track item; let  i = $index) {
       <li fd-list-item >
         <span class="line-number">{{i+1}}</span>
-        <div *ngIf="isString(item);" fd-list-title [innerHTML]="item"></div>
-        <div *ngIf="!isString(item)" fd-list-title>
+        <div *ngIf="isString(item);" [innerHTML]="item"></div>
+        <div *ngIf="!isString(item)">
           <span>{{ item.preLinkText }} </span>
           <a routerLink="." queryParamsHandling="merge" [queryParams]="{screenSet: item.screenSet, startScreen: item.startScreen || undefined}">{{ item.linkText }}</a>
           <span> {{ item.postLinkText }}</span>
