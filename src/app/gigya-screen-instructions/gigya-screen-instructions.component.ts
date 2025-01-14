@@ -10,22 +10,10 @@ import {ILinkInformation} from '../interfaces/IGigyaModuleItem';
 export class GigyaScreenInstructionsComponent implements OnInit{
   @Input() instructions? : Array<string | ILinkInformation>;
 
-  public onClick(){
-    alert('click');
-  }
-
   ngOnInit(): void {
   }
 
   isString(value: any): value is string {
     return typeof value === 'string';
-  }
-
-  getObjectText(value: { text: string }): string {
-    return value.text;
-  }
-
-  launch(item: ILinkInformation) {
-    alert('het');
   }
 }

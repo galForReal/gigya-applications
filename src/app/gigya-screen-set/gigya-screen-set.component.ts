@@ -33,21 +33,11 @@ export class GigyaScreenSetComponent implements OnChanges {
 
     if(this.globalWindow) {
       if (this.globalWindow.gigya){
-        gigya.accounts.showScreenSet({
-          ...(!this.popup && { containerID: 'containerId'}),
-          screenSet: this.screenSet,
-          ...(this.startScreen && { startScreen: this.startScreen}),
-          ...(this.lang && { 'lang': this.lang})
-        });
+        this.showScreenSet();
       }
       else {
         this.globalWindow.onGigyaServiceReady = () => {
-          gigya.accounts.showScreenSet({
-            ...(!this.popup && { containerID: 'containerId'}),
-            screenSet: this.screenSet,
-            ...(this.startScreen && { 'startScreen': this.startScreen}),
-            ...(this.lang && { 'lang': this.lang})
-          });
+          this.showScreenSet();
         };
       }
     }
@@ -56,7 +46,6 @@ export class GigyaScreenSetComponent implements OnChanges {
   showScreenSet(){
     gigya.accounts.showScreenSet({
       ...(!this.popup && { containerID: 'containerId'}),
-      containerID:'containerId',
       screenSet: this.screenSet,
       ...(this.startScreen && { startScreen: this.startScreen}),
       ...(this.lang && { 'lang': this.lang})
