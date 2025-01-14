@@ -1,4 +1,13 @@
 <ng-container *ngIf="gigyaModule$ | async as data">
+
+<fd-toolbar>
+  <h2 fd-toolbar-label>{{data.id}}. {{data.name}} </h2>
+  <fd-toolbar-spacer></fd-toolbar-spacer>
+</fd-toolbar>
+
+
+
+
   <fd-layout-grid>
     <div fdLayoutGridRow>
       <div [fdLayoutGridCol]="3">

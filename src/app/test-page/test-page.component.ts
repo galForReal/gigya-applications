@@ -11,9 +11,6 @@ import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 })
 export class TestPageComponent implements OnInit{
   protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.getDisplayParams();
-  protected apikey: string | undefined;
-  protected screenSet: string | undefined;
-  protected startScreen: string | undefined;
 
   constructor(private route: ActivatedRoute, private testService: DataService) {
   }
@@ -30,6 +27,7 @@ export class TestPageComponent implements OnInit{
           const startScreen = this.getStartScreen(data, routeParams);
           return {
             id: data?.id,
+            name: data?.name,
             apiKey: data?.apiKey,
             environment: data?.environment,
             instructions: data?.instructions,

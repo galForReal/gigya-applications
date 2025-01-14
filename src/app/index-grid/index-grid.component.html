@@ -20,7 +20,7 @@
     <ul fd-list fdCompact *ngFor="let item of displayData">
       <li fd-list-item>
         <div [fdLayoutGridCol]="4">
-          <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} </a>(english)
+          <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} (English)</a>
         </div>
         <div [fdLayoutGridCol]="4">
           @for (lang of defaultLanguages; track lang; let  i = $index) {
