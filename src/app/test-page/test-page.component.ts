@@ -3,6 +3,7 @@ import {combineLatest, map, Observable} from 'rxjs';
 import {ActivatedRoute, Params} from '@angular/router';
 import {DataService} from '../services/data.service';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
+import {QueryParams} from '../constants/enums';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class TestPageComponent implements OnInit{
   ngOnInit(): void {}
 
   getDisplayParams(): Observable<IGigyaModuleItem> {
-    const dataParams$ = this.testService.getTestById(this.route.snapshot.queryParamMap.get('id'));
+    const dataParams$ = this.testService.getTestById(this.route.snapshot.queryParamMap.get(QueryParams.ID));
     const routeParams$ = this.route.queryParams;
 
     return combineLatest([dataParams$, routeParams$])
@@ -31,10 +32,10 @@ export class TestPageComponent implements OnInit{
             apiKey: data?.apiKey,
             environment: data?.environment,
             instructions: data?.instructions,
-            screenSet: routeParams['screenSet'] || data?.screenSet,
+            screenSet: routeParams[QueryParams.ScreenSet] || data?.screenSet,
             ...(startScreen && { startScreen: startScreen}),
-            ...(routeParams['lang'] && routeParams['lang'] != 'en' && { selectedLang: routeParams['lang']}),
-            ...(routeParams['popup'] && { popup: routeParams['popup']}),
+            ...(routeParams[QueryParams.Language] && routeParams[QueryParams.Language] != 'en' && { selectedLang: routeParams[QueryParams.Language]}),
+            ...(routeParams[QueryParams.Popup] && { popup: routeParams[QueryParams.Popup]}),
           } as IGigyaModuleItem
         })
       );
