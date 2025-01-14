@@ -1,1 +1,4 @@
 .fd-button { margin-right:8px }
+.fd-switch-custom {display: inline-block}
+.table-header {border: 0}
+.table-header .head-text {font-weight:bold}

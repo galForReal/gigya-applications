@@ -1,13 +1,28 @@
 <fd-layout-grid>
   <div fdLayoutGridRow>
-    <ul fd-list fdCompact *ngFor="let item of displayData">
-      <li fd-list-item >
-        <div [fdLayoutGridCol]="3">
-<!--          <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} (English)</a>-->
-          <label fd-list-title>{{item.id}}. {{item.name}}</label>
+    <ul fd-list fdCompact>
+      <li fd-list-item class="table-header">
+        <div [fdLayoutGridCol]="3" class="head-text">
+          Flow
         </div>
-        <div [fdLayoutGridCol]="1">
-          <fd-switch fdCompact [(ngModel)]="item.popup" activeText="pop" inactiveText="pop"></fd-switch>
+        <div [fdLayoutGridCol]="3" class="head-text">
+          Popup mode
+        </div>
+        <div fdLayoutGridCol colGrow class="head-text">
+          Other available languages
+        </div>
+      </li>
+
+      <li fd-list-item *ngFor="let item of displayData" >
+        <div [fdLayoutGridCol]="3">
+          {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} (English)</a>
+        </div>
+        <div [fdLayoutGridCol]="3">
+          <div class="fd-form__item">
+            <label class="fd-form__label">
+              <span><fd-switch fdCompact [(ngModel)]="item.popup" activeText="on" inactiveText="off"></fd-switch></span>
+            </label>
+          </div>
         </div>
 
         <div fdLayoutGridCol colGrow>
