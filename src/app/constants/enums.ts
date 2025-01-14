@@ -1,4 +1,7 @@
 export enum QueryParams {
-  Admin = 'admin',
-  User = 'user',
+  ID = 'id',
+  Language = 'lang',
+  Popup = 'popup',
+  ScreenSet = 'screenSet',
+  StartScreen = 'startScreen'
 }
