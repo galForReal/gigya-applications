@@ -8,7 +8,7 @@ import {
   CardModule,
   GridListModule, IconComponent, LayoutGridModule, ListModule, ToolbarModule, ButtonComponent,
   provideTheming, ShellbarModule,
-  ThemingModule, InputGroupModule
+  ThemingModule, InputGroupModule, SwitchComponent
 } from '@fundamental-ngx/core';
 import {RouterModule, RouterOutlet, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
@@ -50,6 +50,7 @@ const routes: Routes = [
     ToolbarModule,
     InputGroupModule,
     ButtonComponent,
+    SwitchComponent,
     FormsModule,
 
   ],

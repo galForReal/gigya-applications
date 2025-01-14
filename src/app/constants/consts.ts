@@ -1,5 +1,7 @@
 export const DefaultLanguages = [
+  { key: 'English', value: 'en' },
   { key: 'Arabic', value: 'ar' },
-  { key: 'German', value: 'de' },
   { key: 'Spanish', value: 'es' },
 ];
+
+//  { key: 'German', value: 'de' },

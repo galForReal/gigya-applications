@@ -4,6 +4,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 import {DataService} from '../services/data.service';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 
+
 @Component({
   selector: 'app-test-page',
   templateUrl: './test-page.component.html',
@@ -11,7 +12,6 @@ import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 })
 export class TestPageComponent implements OnInit{
   protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.getDisplayParams();
-
   constructor(private route: ActivatedRoute, private testService: DataService) {
   }
 
@@ -33,7 +33,7 @@ export class TestPageComponent implements OnInit{
             instructions: data?.instructions,
             screenSet: routeParams['screenSet'] || data?.screenSet,
             ...(startScreen && { startScreen: startScreen}),
-            ...(routeParams['lang'] && { selectedLang: routeParams['lang']}),
+            ...(routeParams['lang'] && routeParams['lang'] != 'en' && { selectedLang: routeParams['lang']}),
           } as IGigyaModuleItem
         })
       );
