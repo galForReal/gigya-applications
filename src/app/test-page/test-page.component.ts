@@ -42,8 +42,8 @@ export class TestPageComponent implements OnInit{
   }
 
   getStartScreen(data: any, routeParams: any): string | undefined{
-    if(routeParams[QueryParams.StartScreen])
-      return routeParams[QueryParams.StartScreen] ?? undefined;
+    if(routeParams[QueryParams.ScreenSet])
+      return routeParams[QueryParams.StartScreen];
     else
       return data?.startScreen ?? undefined
   }
