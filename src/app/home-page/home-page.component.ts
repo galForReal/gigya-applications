@@ -18,7 +18,7 @@ export class HomePageComponent {
   }
 
   public handleSearchTermChange(searchTerm: string) {
-    this.dataService.filterDataByName(searchTerm);
+    this.data$ = this.dataService.filterDataByName(searchTerm);
   }
 
 
