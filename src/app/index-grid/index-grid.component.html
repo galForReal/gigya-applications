@@ -2,8 +2,8 @@
   <div fdLayoutGridRow>
     <ul fd-list fdCompact>
       <li fd-list-item class="table-header">
-        <div [fdLayoutGridCol]="3" class="head-text">
-          Flow
+        <div [fdLayoutGridCol]="4" class="head-text">
+          Flow (English)
         </div>
         <div [fdLayoutGridCol]="3" class="head-text">
           Popup mode
@@ -14,8 +14,8 @@
       </li>
 
       <li fd-list-item *ngFor="let item of displayData" >
-        <div [fdLayoutGridCol]="3">
-          {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id }">{{item.name}} (English)</a>
+        <div [fdLayoutGridCol]="4">
+          {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
         </div>
         <div [fdLayoutGridCol]="3">
           <div class="fd-form__item">
