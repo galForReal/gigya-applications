@@ -2,7 +2,7 @@
   <h3 class="list-title" aria-describedby="list-steps">Instructions</h3>
   <ul fd-list fdCompact>
     @for (item of instructions; track item; let  i = $index) {
-      <li fd-list-item >
+      <li fd-list-item class="list-item">
         <span class="line-number">{{i+1}}</span>
         <div *ngIf="isString(item);" [innerHTML]="item"></div>
         <div *ngIf="!isString(item)">
