@@ -2,5 +2,11 @@
 
 </div>
 
+<div fd-busy-indicator-extended *ngIf="isLoading" class="loader-overlay custom-busy-indicator">
+  <fd-busy-indicator [loading]="true" [size]="'l'" label="Please Wait..." title="Please wait"></fd-busy-indicator>
+</div>
+
+
+
 
 

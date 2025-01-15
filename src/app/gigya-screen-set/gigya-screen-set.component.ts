@@ -1,4 +1,4 @@
-import {Component, Inject, Input, OnChanges} from '@angular/core';
+import {Component, Inject, Input, NgZone, OnChanges} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 
 
@@ -23,8 +23,9 @@ export class GigyaScreenSetComponent implements OnChanges {
   @Input() lang?: string;
   @Input() popup?: boolean;
   globalWindow: any;
+  isLoading: boolean = true;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
+  constructor(@Inject(DOCUMENT) private document: Document, private zone: NgZone) {
     this.globalWindow = document.defaultView;
   }
 
@@ -44,12 +45,27 @@ export class GigyaScreenSetComponent implements OnChanges {
   }
 
   showScreenSet(){
-    gigya.accounts.showScreenSet({
-      ...(!this.popup && { containerID: 'containerId'}),
-      screenSet: this.screenSet,
-      ...(this.startScreen && { startScreen: this.startScreen}),
-      ...(this.lang && { 'lang': this.lang})
-    });
+    setTimeout(() =>
+      gigya.accounts.showScreenSet({
+        ...(!this.popup && { containerID: 'containerId'}),
+        screenSet: this.screenSet,
+        ...(this.startScreen && { startScreen: this.startScreen}),
+        ...(this.lang && { 'lang': this.lang}),
+        onAfterScreenLoad: () => {
+          this.zone.run(() => this.handleScreenLoad());
+        },
+        onError: (error: any) => {
+          this.zone.run(() => this.handleError(error));
+        }
+      }), 2000)
+  }
+
+  handleScreenLoad(): void {
+    this.isLoading = false; // Hide the loader when the screen is ready
+  }
+
+  handleError(error: any): void {
+    this.isLoading = false; // Also hide the loader on error to avoid infinite loading
   }
 
 

@@ -60,3 +60,28 @@ body {
   padding-inline: 1rem !important;
   margin-bottom:19px;
 }
+
+
+
+.custom-busy-indicator .fd-busy-indicator__circle {
+  background-color: #fff;
+}
+
+.custom-busy-indicator .fd-busy-indicator-extended__label{
+  color: #fff;
+  font-size: 18px;
+  margin: 18px 0px 0px 24px
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
