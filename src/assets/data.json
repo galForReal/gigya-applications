@@ -529,14 +529,14 @@
     "description": "simple flow",
     "instructions": [
       "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      "Login with a valid user or register with valid user with email",
       {
         "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
+        "screenSet": "New_08-01-24-ProfileUpdate",
+        "startScreen": "gigya-update-profile-screen",
+        "postLinkText": "Edit profile screen to watch profile details and edit it"
       },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Click Change password to change it"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -550,14 +550,16 @@
     "description": "simple flow",
     "instructions": [
       "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      "Login with a valid user or register with valid user with email",
       {
         "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
+        "screenSet": "New_08-01-24-ProfileUpdate",
+        "startScreen": "gigya-update-profile-screen",
+        "postLinkText": "Edit profile screen to watch profile details and edit it"
       },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Click \"Set or edit phone number\"",
+      "Provide valid phone number, click \"Get the code'",
+      "Provide the code and click verify to complete the process"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -571,14 +573,16 @@
     "description": "simple flow",
     "instructions": [
       "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      "Login with a valid user or register with valid user with email",
       {
         "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
+        "screenSet": "New_08-01-24-ProfileUpdate",
+        "startScreen": "gigya-update-profile-screen",
+        "postLinkText": "Edit profile screen to watch profile details and edit it"
       },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Click \"Set email with verification\"",
+      "Provide valid email, click \"Get the code\"",
+      "Provide the code and click verify to complete the process"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -592,14 +596,18 @@
     "description": "simple flow",
     "instructions": [
       "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      "Start registering with valid email",
+      "On \"Securing Your Account\" screen make sure Phone (SMS) is selected in the \"Authentication Method\"",
+      "Fill details and click get the code",
+      "Fill received SMS and click submit",
       {
-        "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
+        "linkText": "Launch",
+        "screenSet": "New_08-01-24-ProfileUpdate",
+        "startScreen": "gigya-update-profile-screen",
+        "postLinkText": "Edit profile screen to watch profile details"
       },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Click \"Verification methods\"",
+      "Click \"Edit\" to change device, set a new device and verify it by ocde"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -613,14 +621,18 @@
     "description": "simple flow",
     "instructions": [
       "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      "Start registering with valid email",
+      "On \"Securing Your Account\" screen make sure \"Time based Authentication\" is selected in the \"Authentication Method\"",
+      "Scan QR code via your authenticator app",
+      "Fill the code from the authenticator app and click submit",
       {
-        "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
+        "linkText": "Launch",
+        "screenSet": "New_08-01-24-ProfileUpdate",
+        "startScreen": "gigya-update-profile-screen",
+        "postLinkText": "Edit profile screen to watch profile details"
       },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Click \"Verification methods\"",
+      "Click \"Change Device\" to change device, scan a new QA code and confirm"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -634,14 +646,27 @@
     "description": "simple flow",
     "instructions": [
       "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      "Start registering with valid email",
+      "On \"Securing Your Account\" screen make sure \"Time based Authentication\" is selected in the \"Authentication Method\"",
+      "Scan QR code via your authenticator app",
+      "Fill the code from the authenticator app and click submit",
       {
-        "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
+        "linkText": "Launch",
+        "screenSet": "New_08-01-24-ProfileUpdate",
+        "startScreen": "gigya-update-profile-screen",
+        "postLinkText": "Edit profile screen to watch profile details"
       },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Click \"Verification methods\"",
+      "Click \"Backup codes\" to view current set of codes",
+      "Click \"Generate new codes\" to generate a new set. Remember one code",
+      {
+        "linkText": "Launch",
+        "screenSet": "New_08-01-24-RegistrationLogin",
+        "startScreen": "gigya-login-screen",
+        "postLinkText": "login screen and try to login"
+      },
+      "Don't use authenticator code to login, click on \"Can't access your app? Use a backup code\"",
+      "Use the code you remembered on previous step to complete login"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -655,14 +680,12 @@
     "description": "simple flow",
     "instructions": [
       "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
-      {
-        "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
-      },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Login with valid user: test@test.com / qwerty",
+      "Scroll down to \"Gigya Add connection UI\" and click on one of the social networks to link it to your site account",
+      "Complete login",
+      "\"Gigya Add connection UI\" and \"Gigya Edit connection UI\" should update and reflect that your social identity is logged in and connected",
+      "On \"Gigya Add connection UI\": Green checkmark appears on the social network icon",
+      "On \"Gigya Edit connection UI\": \"connect\" link changes to \"disconnect\""
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -675,15 +698,23 @@
     "name": "Subscribe to subscription channels",
     "description": "simple flow",
     "instructions": [
-      "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      "Launch initial screen",
+      "Login with valid user: test@test.com / qwerty or register as a new one",
+      "Launch",
       {
-        "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
+        "linkText": "Launch",
+        "screenSet": "New_08-01-24-Subscriptions",
+        "startScreen": "gigya-sms-subscription-subscribe-full-screen",
+        "postLinkText": "Subscription screen"
       },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Enter a valid mobile number and click \"verify\"",
+      "Enter incorrect code",
+      "Wait for a couple of seconds",
+      "An error should appear",
+      "Click resend",
+      "Enter the code received by sms",
+      "Wait for a couple of seconds",
+      "Number should be verified : \"verified\" text should appear"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
     "screenSet": "New_08-01-24-RegistrationLogin",
@@ -692,19 +723,13 @@
     "languages": []
   },
   {
-    "id": "35",
+    "id": "34",
     "name": "Use hosted pages to login",
     "description": "simple flow",
     "instructions": [
-      "Launch screen",
-      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
-      {
-        "linkText": "launch",
-        "screenSet": "Default-RegistrationLogin",
-        "startScreen": "gigya-register-screen",
-        "postLinkText": "this site"
-      },
-      "Launch screen Register with a user with invalid email to see control error"
+      "Launch initial screen",
+      "Login with valid user: test@test.com / qwerty or register as a new one",
+      "On successfully login, user is redirected to sap.com web site"
     ],
     "url": "https://344270779722.us1.my.gigya-ext.com/pages/login",
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
