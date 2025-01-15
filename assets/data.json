@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "name": "Login with email",
+    "name": "Register with email",
     "description": "simple flow",
     "instructions": [
       "Launch screen",
@@ -13,9 +13,9 @@
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
-    "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
-    "screenSet": "Default-RegistrationLogin",
-    "startScreen": "gigya-login-screen",
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-register-screen",
     "environment": "us1"
   },
   {
@@ -33,8 +33,8 @@
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
-    "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
-    "screenSet": "Default-RegistrationLogin",
+    "apiKey": "4_tTso9rMByVxNRGefBxyjTA",
+    "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": [{"key":"Hindi", "value": "hi"}]
@@ -54,9 +54,393 @@
       },
       "Launch screen Register with a user with invalid email to see control error"
     ],
-    "apiKey": "4_8DXxiu8XH0ixa6fFEuAbOg",
-    "screenSet": "Default-ProfileUpdate",
-    "startScreen": "",
+    "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-register-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Register to TFA with TOTP",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-register-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Register and verify email using link",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-register-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Register and verify email using code",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_yT812G2FYJS8-JsK8OXMRQ",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-register-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Sign up to a newsletter (lite registration)",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "New_08-01-24-LiteRegistration",
+    "startScreen": "gigya-subscribe-with-email-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Lite account progression",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "New_08-01-24-LiteRegistration",
+    "startScreen": "gigya-subscribe-with-email-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Login with email",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Encounter mandatory password change request during login",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Login with Magic link - Password-Less flows",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
+    "screenSet": "New_08-01-24-PasswordlessLogin",
+    "startScreen": "gigya-passwordless-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Login with email code - Password-Less flows",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
+    "screenSet": "New_08-01-24-PasswordlessLogin",
+    "startScreen": "gigya-passwordless-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Login with password - Password-Less flows",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
+    "screenSet": "New_08-01-24-PasswordlessLogin",
+    "startScreen": "gigya-passwordless-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Login with Email TFA",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_Lq73PDxVL9tGmbCG7Xlocg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-register-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Login with SMS TFA",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Login with TOTP TFA",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Login with mobile phone number",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-mobile-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "18",
+    "name": "User forgot password and reset it",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
+  },
+  {
+    "id": "19",
+    "name": "User forgot password and reset it",
+    "description": "simple flow",
+    "instructions": [
+      "Launch screen",
+      "Type a valid email User should see checkmark on the right side of the email field indicating valid input",
+      {
+        "linkText": "launch",
+        "screenSet": "Default-RegistrationLogin",
+        "startScreen": "gigya-register-screen",
+        "postLinkText": "this site"
+      },
+      "Launch screen Register with a user with invalid email to see control error"
+    ],
+    "apiKey": "4_cY45soSfPdn59wnPcykFbg",
+    "screenSet": "New_08-01-24-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": [
       {"key":"Hindi", "value": "hi"},
