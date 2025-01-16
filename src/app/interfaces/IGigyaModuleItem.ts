@@ -11,7 +11,8 @@ export interface IGigyaModuleItem {
   environment: string,
   languages: KeyValue<string, string>[] | undefined,
   selectedLang: string | undefined,
-  popup: boolean
+  popup: boolean;
+  url?: string
 }
 
 export interface ILinkInformation {

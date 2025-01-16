@@ -12,15 +12,23 @@
         <app-gigya-screen-instructions [instructions]="data.instructions"></app-gigya-screen-instructions>
       </div>
       <div [fdLayoutGridCol]="1" class="sep"></div>
-      <div [fdLayoutGridCol]="6">
-        <app-gigya-screen-set
-          [apiKey]="data.apiKey"
-          [environment]="data.environment"
-          [screenSet]="data.screenSet"
-          [startScreen]="data.startScreen"
-          [lang]="data?.selectedLang"
-          [popup]="data?.popup"
-        ></app-gigya-screen-set>
+      <div [fdLayoutGridCol]="8">
+        @if (data?.url){
+          <app-url-viewer
+            [url]="data.url"
+            [lang]="data?.selectedLang">
+          </app-url-viewer>
+        } @else {
+          <app-gigya-screen-set
+            *ngIf="!data?.url"
+            [apiKey]="data.apiKey"
+            [environment]="data.environment"
+            [screenSet]="data.screenSet"
+            [startScreen]="data.startScreen"
+            [lang]="data?.selectedLang"
+            [popup]="data?.popup"
+          ></app-gigya-screen-set>
+        }
       </div>
     </div>
   </fd-layout-grid>

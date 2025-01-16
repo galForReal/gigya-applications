@@ -15,12 +15,16 @@
 
       <li fd-list-item *ngFor="let item of data" >
         <div [fdLayoutGridCol]="4">
-          {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
+          @if (!item.url){
+            {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
+          } @else {
+            {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id}">{{item.name}}</a>
+          }
         </div>
         <div [fdLayoutGridCol]="3">
           <div class="fd-form__item">
             <label class="fd-form__label">
-              <span><fd-switch fdCompact [(ngModel)]="item.popup" (ngModelChange)="switchChange(item)" activeText="on" inactiveText="off"></fd-switch></span>
+              <span><fd-switch fdCompact [disabled]="item?.url != undefined" [(ngModel)]="item.popup" (ngModelChange)="switchChange(item)" activeText="on" inactiveText="off"></fd-switch></span>
             </label>
           </div>
         </div>

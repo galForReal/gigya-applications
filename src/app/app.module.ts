@@ -17,6 +17,8 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {GigyaScreenSetComponent} from './gigya-screen-set/gigya-screen-set.component';
 import {GigyaScreenInstructionsComponent} from './gigya-screen-instructions/gigya-screen-instructions.component';
 import {FormsModule} from '@angular/forms';
+import {UrlViewerComponent} from './url-viewer/url-viewer.component';
+import {SafeUrlPipe} from './pipes/safe-url-pipe.pipe';
 
 const routes: Routes = [
   {path:'', component:HomePageComponent},
@@ -30,7 +32,8 @@ const routes: Routes = [
     TestPageComponent,
     IndexGridComponent,
     GigyaScreenSetComponent,
-    GigyaScreenInstructionsComponent
+    GigyaScreenInstructionsComponent,
+    UrlViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ const routes: Routes = [
     ButtonComponent,
     SwitchComponent,
     FormsModule,
+    SafeUrlPipe,
 
   ],
   providers: [

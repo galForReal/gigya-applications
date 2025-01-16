@@ -13,13 +13,13 @@ import {QueryParams} from '../constants/enums';
 })
 export class TestPageComponent implements OnInit{
   protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.getDisplayParams();
-  constructor(private route: ActivatedRoute, private testService: DataService) {
+  constructor(private route: ActivatedRoute, private dataService: DataService) {
   }
 
   ngOnInit(): void {}
 
   getDisplayParams(): Observable<IGigyaModuleItem> {
-    const dataParams$ = this.testService.getTestById$(this.route.snapshot.queryParamMap.get(QueryParams.ID));
+    const dataParams$ = this.dataService.getTestById$(this.route.snapshot.queryParamMap.get(QueryParams.ID));
     const routeParams$ = this.route.queryParams;
 
     return combineLatest([dataParams$, routeParams$])
@@ -32,6 +32,7 @@ export class TestPageComponent implements OnInit{
             apiKey: data?.apiKey,
             environment: data?.environment,
             instructions: data?.instructions,
+            url: data?.url,
             screenSet: routeParams[QueryParams.ScreenSet] || data?.screenSet,
             ...(startScreen && { startScreen: startScreen}),
             ...(routeParams[QueryParams.Language] && routeParams[QueryParams.Language] != 'en' && { selectedLang: routeParams[QueryParams.Language]}),
