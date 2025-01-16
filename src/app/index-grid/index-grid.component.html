@@ -13,7 +13,7 @@
         </div>
       </li>
 
-      <li fd-list-item *ngFor="let item of data" >
+      <li fd-list-item *ngFor="let item of displayedItems" >
         <div [fdLayoutGridCol]="4">
           @if (!item.url){
             {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
@@ -41,6 +41,15 @@
     </ul>
   </div>
 </fd-layout-grid>
+
+<fd-pagination
+  [displayTotalItems]="false"
+  [itemsPerPage]="itemsPerPage"
+  [totalItems]="data?.length || 0"
+  (pageChangeStart)="newPageClicked($event)"
+  [currentPage]="currentPage"
+  ariaLabel="Basic pagination example"
+></fd-pagination>
 
 
 
