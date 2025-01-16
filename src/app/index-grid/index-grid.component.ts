@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 import {Router} from '@angular/router';
 import {DefaultLanguages} from '../constants/consts';
+import {DataService} from '../services/data.service';
 
 @Component({
   selector: 'app-index-grid',
@@ -10,14 +11,15 @@ import {DefaultLanguages} from '../constants/consts';
 })
 export class IndexGridComponent implements OnInit{
   @Input() data: IGigyaModuleItem[] | undefined;
-
-  displayData:IGigyaModuleItem[] | undefined;
   defaultLanguages = DefaultLanguages;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private dataService: DataService) {
   }
 
   ngOnInit(): void {
-    this.displayData = this.data;
+  }
+
+  switchChange(item : IGigyaModuleItem) {
+    this.dataService.update(item);
   }
 }

@@ -1,10 +1,4 @@
-import {Component, signal} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {IndexGridComponent} from './index-grid/index-grid.component';
-import {DataService} from './services/data.service';
-import {Observable} from 'rxjs';
-import {IGigyaModuleItem} from './interfaces/IGigyaModuleItem';
-import {AsyncPipe, CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
 import {ThemingService} from '@fundamental-ngx/core';
 
 @Component({
@@ -14,14 +8,8 @@ import {ThemingService} from '@fundamental-ngx/core';
 })
 export class AppComponent {
   title = 'GigyaApplications';
-  protected modules$;
 
-  constructor(private testService: DataService, private themingService: ThemingService) {
+  constructor(private themingService: ThemingService) {
     this.themingService.setTheme('sap_horizon');
-    this.modules$ = this.testService.data;
-  }
-
-  navigate(){
-
   }
 }

@@ -19,7 +19,7 @@ export class TestPageComponent implements OnInit{
   ngOnInit(): void {}
 
   getDisplayParams(): Observable<IGigyaModuleItem> {
-    const dataParams$ = this.testService.getTestById(this.route.snapshot.queryParamMap.get(QueryParams.ID));
+    const dataParams$ = this.testService.getTestById$(this.route.snapshot.queryParamMap.get(QueryParams.ID));
     const routeParams$ = this.route.queryParams;
 
     return combineLatest([dataParams$, routeParams$])
