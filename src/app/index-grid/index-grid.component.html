@@ -34,7 +34,7 @@
             <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
           }
           @for (lang of item?.languages ; track lang;) {
-            <button fd-button fdType="attention" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
+            <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
           }
         </div>
       </li>

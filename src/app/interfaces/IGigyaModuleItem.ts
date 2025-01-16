@@ -3,15 +3,15 @@ import {KeyValue} from '@angular/common';
 export interface IGigyaModuleItem {
   id: string,
   name: string,
-  instructions: Array<string | ILinkInformation>,
-  description: string,
-  apiKey: string,
-  screenSet: string,
+  instructions?: Array<string | ILinkInformation>,
+  description?: string,
+  apiKey?: string,
+  screenSet?: string,
   startScreen?: string,
   environment: string,
-  languages: KeyValue<string, string>[] | undefined,
-  selectedLang: string | undefined,
-  popup: boolean;
+  languages?: KeyValue<string, string>[] | undefined,
+  selectedLang?: string | undefined,
+  popup?: boolean;
   url?: string
 }
 

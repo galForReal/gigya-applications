@@ -8,4 +8,8 @@ export class UrlViewerComponent {
   @Input() url:string | undefined = "";
   @Input() lang?: string;
   constructor() {}
+
+  getUrl(): string{
+    return this.lang ? `${this.url}?lang=${this.lang}` : this.url ?? '';
+  }
 }
