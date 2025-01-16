@@ -17,9 +17,6 @@ export class DataService {
     this._data.next(data);
   }
 
-  private fetchData(): Observable<IGigyaModuleItem[]> {
-    return this.http.get<any[]>(this.dataUrl);
-  }
   get data$():Observable<IGigyaModuleItem[]> {
     if(!this._data.value?.length)
       this.populateData();

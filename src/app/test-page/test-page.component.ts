@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {combineLatest, map, Observable} from 'rxjs';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {DataService} from '../services/data.service';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 import {QueryParams} from '../constants/enums';

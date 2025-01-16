@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {DataService} from '../services/data.service';
-import {map, Observable} from 'rxjs';
+import {Observable} from 'rxjs';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 
 @Component({
