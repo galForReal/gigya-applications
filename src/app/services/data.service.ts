@@ -9,6 +9,7 @@ import {BehaviorSubject, firstValueFrom, map, Observable} from "rxjs";
 export class DataService {
   private dataUrl = 'assets/data.json';
   private _data = new BehaviorSubject<IGigyaModuleItem[]>([]);
+  private _isFiltered: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -23,6 +24,10 @@ export class DataService {
     return this._data.asObservable();
   }
 
+  get isFiltered(): boolean{
+    return this._isFiltered;
+  }
+
   public getTestById$(id: string | null): Observable<IGigyaModuleItem | undefined> {
     return this.data$
       .pipe(
@@ -31,9 +36,11 @@ export class DataService {
   }
   public filterDataByName$(searchTerm: string):Observable<IGigyaModuleItem[]>{
     if(searchTerm?.length <= 1){
+      this._isFiltered = false;
       return this.data$;
     }
 
+    this._isFiltered = true;
     return this.data$.pipe(
       map(array => array.filter((item) => item.name.toLowerCase().includes(searchTerm))));
   }

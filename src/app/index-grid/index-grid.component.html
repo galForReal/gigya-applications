@@ -13,7 +13,7 @@
         </div>
       </li>
 
-      <li fd-list-item *ngFor="let item of displayedItems" >
+      <li fd-list-item *ngFor="let item of pageItems" >
         <div [fdLayoutGridCol]="4">
           @if (!item.url){
             {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
