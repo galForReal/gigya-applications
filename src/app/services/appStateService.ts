@@ -12,7 +12,6 @@ export class AppStateService {
   private _state = new BehaviorSubject<AppState>(new AppState());
 
   get page(){
-    debugger;
     return this._state.value.pageNumber;
   }
 
