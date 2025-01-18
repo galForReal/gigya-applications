@@ -732,9 +732,6 @@
       "On successfully login, user is redirected to sap.com web site"
     ],
     "url": "https://344270779722.us1.my.gigya-ext.com/pages/login",
-    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
-    "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
   }
