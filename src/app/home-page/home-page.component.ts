@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {DataService} from '../services/data.service';
 import {Observable} from 'rxjs';
@@ -9,7 +9,7 @@ import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent implements OnInit{
+export class HomePageComponent{
   protected data$: Observable<IGigyaModuleItem[]>;
   searchTerm: string | undefined;
 
@@ -25,10 +25,4 @@ export class HomePageComponent implements OnInit{
     this.searchTerm = '';
     this.handleSearchTermChange('');
   }
-
-  ngOnInit(): void {
-  }
-
-
-
 }

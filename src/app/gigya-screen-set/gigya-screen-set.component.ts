@@ -1,13 +1,6 @@
-import {Component, Inject, Input, NgZone, OnChanges} from '@angular/core';
+import {Component, Inject, Input, NgZone, OnChanges, OnInit, SimpleChange, SimpleChanges} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
-
-
-declare let gigya: any;
-
-export class _Window extends Window{
-  onGigyaServiceReady?: () => void;
-  gigya?: any;
-}
+import {GigyaService} from '../services/gigya.service';
 
 @Component({
   selector: 'app-gigya-screen-set',
@@ -15,7 +8,7 @@ export class _Window extends Window{
   styleUrl: './gigya-screen-set.component.css'
 })
 
-export class GigyaScreenSetComponent implements OnChanges {
+export class GigyaScreenSetComponent implements OnChanges , OnInit{
   @Input() apiKey?: string;
   @Input() screenSet?: string;
   @Input() startScreen?: string;
@@ -25,39 +18,41 @@ export class GigyaScreenSetComponent implements OnChanges {
   globalWindow: any;
   isLoading: boolean = true;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private zone: NgZone) {
+  constructor(
+    private gigyaService: GigyaService,
+    @Inject(DOCUMENT) private document: Document,
+    private zone: NgZone) {
     this.globalWindow = document.defaultView;
   }
 
-  ngOnChanges(): void {
-    this.loadScript();
+  ngOnInit(): void {
+    //this.loadScript();
+    this.gigyaService.callback = () => {this.showScreenSet();};
+    this.gigyaService.loadGigyaScript(this.apiKey, this.environment);
 
-    if(this.globalWindow) {
-      if (this.globalWindow.gigya){
+
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    // monitor route query params change
+    if (!changes['apiKey']) {
         this.showScreenSet();
       }
-      else {
-        this.globalWindow.onGigyaServiceReady = () => {
-          this.showScreenSet();
-        };
-      }
-    }
   }
 
   showScreenSet(){
-    setTimeout(() =>
-      gigya.accounts.showScreenSet({
-        ...(!this.popup && { containerID: 'containerId'}),
-        screenSet: this.screenSet,
-        ...(this.startScreen && { startScreen: this.startScreen}),
-        ...(this.lang && { 'lang': this.lang}),
-        onAfterScreenLoad: () => {
-          this.zone.run(() => this.handleScreenLoad());
-        },
-        onError: (error: any) => {
-          this.zone.run(() => this.handleError(error));
-        }
-      }), 2000)
+    this.globalWindow['gigya']?.accounts?.showScreenSet({
+      ...(!this.popup && {containerID: 'containerId'}),
+      screenSet: this.screenSet,
+      ...(this.startScreen && {startScreen: this.startScreen}),
+      ...(this.lang && {'lang': this.lang}),
+      onAfterScreenLoad: () => {
+        this.zone.run(() => this.handleScreenLoad());
+      },
+      onError: (error: any) => {
+        this.zone.run(() => this.handleError(error));
+      }
+    });
   }
 
   handleScreenLoad(): void {
@@ -67,29 +62,5 @@ export class GigyaScreenSetComponent implements OnChanges {
   handleError(error: any): void {
     this.isLoading = false; // Also hide the loader on error to avoid infinite loading
   }
-
-
-  loadScript() {
-    let script: HTMLElement | null;
-
-    script = document.getElementById('gigya-id');
-    if(script && (script as HTMLScriptElement)?.src.indexOf(this.apiKey || '') > -1)
-      return;
-
-    if(!script) {
-      let node = document.createElement('script');
-      node.src = `https://cdns.${this.environment}.gigya.com/js/gigya.js?apikey=${this.apiKey}`;
-      node.type = 'text/javascript';
-      node.async = true;
-      node.charset = 'utf-8';
-      node.id = "gigya-id";
-      document.getElementsByTagName('head')[0].appendChild(node);
-    }
-    else {
-      script.setAttribute('src', `https://cdns.${this.environment}.gigya.com/js/gigya.js?apikey=${this.apiKey}`)
-    }
-  }
-
-
 }
 
