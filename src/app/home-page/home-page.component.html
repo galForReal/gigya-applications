@@ -2,11 +2,7 @@
   <h2 fd-toolbar-label>Screens to test</h2>
   <fd-toolbar-spacer></fd-toolbar-spacer>
   <fd-input-group
-    glyph="decline"
-    glyphAriaLabel="Clear"
     placeholder="Search"
-    fdCozy
-    [button]="true"
     [disabled]="false"
     [(ngModel)]="searchTerm"
     (ngModelChange)="handleSearchTermChange($event)"
@@ -18,3 +14,9 @@
 <ng-container *ngIf=" data$ | async as data">
   <app-index-grid [data]="data"></app-index-grid>
 </ng-container>
+
+<!--    glyph="decline"-->
+<!--    glyphAriaLabel="Clear"-->
+<!--    placeholder="Search"-->
+<!--    fdCozy-->
+<!--    [button]="true"-->

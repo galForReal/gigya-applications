@@ -15,7 +15,11 @@
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
-    "environment": "us1"
+    "environment": "us1",
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "2",
@@ -32,7 +36,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": [{"key":"Hindi", "value": "hi"}]
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "3",
@@ -408,7 +415,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
   "id": "21",
@@ -428,7 +438,10 @@
   "screenSet": "New_08-01-24-RegistrationLogin",
   "startScreen": "gigya-login-screen",
   "environment": "us1",
-  "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "22",
@@ -450,7 +463,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "23",
@@ -467,7 +483,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "24",
@@ -486,7 +505,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "25",
@@ -521,7 +543,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "26",
@@ -542,7 +567,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "27",
@@ -565,7 +593,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "28",
@@ -588,7 +619,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "29",
@@ -613,7 +647,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "30",
@@ -638,7 +675,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "31",
@@ -672,7 +712,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "32",
@@ -691,7 +734,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "33",
@@ -720,7 +766,10 @@
     "screenSet": "New_08-01-24-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [
+      {"key":"Hindi", "value": "hi"},
+      {"key":"Russian", "value": "ru"}
+    ]
   },
   {
     "id": "34",
