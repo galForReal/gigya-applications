@@ -41,13 +41,13 @@ export class GigyaService {
     }
     else {
       script.setAttribute('src', `https://cdns.${environment}.gigya.com/js/gigya.js?apikey=${apiKey}`);
-      if (this.gigyaReadyCallback) {
-        setTimeout(() => {
-          if (this.gigyaReadyCallback){
-            this.gigyaReadyCallback();
-          }}, 1000);
-        return;
-      }
+      // if (this.gigyaReadyCallback) {
+      //   setTimeout(() => {
+      //     if (this.gigyaReadyCallback){
+      //       this.gigyaReadyCallback();
+      //     }}, 1000);
+      //   return;
+      // }
     }
 
     this.globalWindow.onGigyaServiceReady = () => {

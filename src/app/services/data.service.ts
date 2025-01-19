@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {IGigyaModuleItem} from "../interfaces/IGigyaModuleItem";
 import {HttpClient} from '@angular/common/http';
-import {BehaviorSubject, firstValueFrom, map, Observable} from "rxjs";
+import {BehaviorSubject, filter, firstValueFrom, map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -23,15 +23,14 @@ export class DataService {
       this.populateData();
     return this._data.asObservable();
   }
-
   get isFiltered(): boolean{
     return this._isFiltered;
   }
-
   public getTestById$(id: string | null): Observable<IGigyaModuleItem | undefined> {
     return this.data$
       .pipe(
-        map(results => results.find(test => test.id === id))
+        map(results => results.find(test => test.id === id)),
+        filter(x => x != undefined)
       );
   }
   public filterDataByName$(searchTerm: string):Observable<IGigyaModuleItem[]>{
@@ -44,7 +43,6 @@ export class DataService {
     return this.data$.pipe(
       map(array => array.filter((item) => item.name.toLowerCase().includes(searchTerm))));
   }
-
   public update(item:IGigyaModuleItem){
     const clone = this._data.value;
     const index = clone.findIndex(x=> x.id == item.id);

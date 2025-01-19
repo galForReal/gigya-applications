@@ -16,9 +16,9 @@
       <li fd-list-item *ngFor="let item of pageItems" >
         <div [fdLayoutGridCol]="4">
           @if (!item.url){
-            {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
+            {{item.id}}. <a attr.aria-label="{{item.name}}" target="_blank" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
           } @else {
-            {{item.id}}. <a attr.aria-label="{{item.name}}" routerLink="testPage" [queryParams]="{ id: item.id}">{{item.name}}</a>
+            {{item.id}}. <a attr.aria-label="{{item.name}}" target="_blank" routerLink="testPage" [queryParams]="{ id: item.id}">{{item.name}}</a>
           }
         </div>
         <div [fdLayoutGridCol]="3">

@@ -1,5 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {combineLatest, map, Observable} from 'rxjs';
+import {
+  combineLatest,
+  distinctUntilChanged,
+  firstValueFrom,
+  forkJoin,
+  map,
+  Observable,
+  of,
+  pipe,
+  switchMap,
+  take,
+  takeUntil
+} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
 import {DataService} from '../services/data.service';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
@@ -16,30 +28,54 @@ export class TestPageComponent implements OnInit{
   constructor(private route: ActivatedRoute, private dataService: DataService) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
+  // getDisplayParams(): Observable<IGigyaModuleItem> {
+  //   const dataParams$ = this.dataService.getTestById$(this.route.snapshot.queryParamMap.get(QueryParams.ID));
+  //   const routeParams$ = this.route.queryParams;
+  //
+  //   return combineLatest([dataParams$, routeParams$])
+  //     .pipe(
+  //       map(([data, routeParams]) => {
+  //         const startScreen = this.getStartScreen(data, routeParams);
+  //         return {
+  //           id: data?.id,
+  //           name: data?.name,
+  //           apiKey: data?.apiKey,
+  //           environment: data?.environment,
+  //           instructions: data?.instructions,
+  //           url: data?.url,
+  //           screenSet: routeParams[QueryParams.ScreenSet] || data?.screenSet,
+  //           ...(startScreen && { startScreen: startScreen}),
+  //           ...(routeParams[QueryParams.Language] && routeParams[QueryParams.Language] != 'en' && { selectedLang: routeParams[QueryParams.Language]}),
+  //           ...(routeParams[QueryParams.Popup] && { popup: routeParams[QueryParams.Popup]}),
+  //         } as IGigyaModuleItem
+  //       })
+  //     );
+  // }
 
   getDisplayParams(): Observable<IGigyaModuleItem> {
-    const dataParams$ = this.dataService.getTestById$(this.route.snapshot.queryParamMap.get(QueryParams.ID));
-    const routeParams$ = this.route.queryParams;
+    return this.route.queryParams.pipe(
+      distinctUntilChanged(),
+      switchMap(async routeParams => {
+        const data = await firstValueFrom(this.dataService.getTestById$(routeParams['id']));
+        const startScreen = this.getStartScreen(data, routeParams);
 
-    return combineLatest([dataParams$, routeParams$])
-      .pipe(
-        map(([data, routeParams]) => {
-          const startScreen = this.getStartScreen(data, routeParams);
-          return {
-            id: data?.id,
-            name: data?.name,
-            apiKey: data?.apiKey,
-            environment: data?.environment,
-            instructions: data?.instructions,
-            url: data?.url,
-            screenSet: routeParams[QueryParams.ScreenSet] || data?.screenSet,
-            ...(startScreen && { startScreen: startScreen}),
-            ...(routeParams[QueryParams.Language] && routeParams[QueryParams.Language] != 'en' && { selectedLang: routeParams[QueryParams.Language]}),
-            ...(routeParams[QueryParams.Popup] && { popup: routeParams[QueryParams.Popup]}),
-          } as IGigyaModuleItem
-        })
-      );
+        return {
+          id: data?.id,
+          name: data?.name,
+          apiKey: data?.apiKey,
+          environment: data?.environment,
+          instructions: data?.instructions,
+          url: data?.url,
+          screenSet: routeParams[QueryParams.ScreenSet] || data?.screenSet,
+          ...(startScreen && { startScreen: startScreen}),
+          ...(routeParams[QueryParams.Language] && routeParams[QueryParams.Language] != 'en' && { selectedLang: routeParams[QueryParams.Language]}),
+          ...(routeParams[QueryParams.Popup] && { popup: routeParams[QueryParams.Popup]}),
+        } as IGigyaModuleItem
+      })
+    )
   }
 
   getStartScreen(data: any, routeParams: any): string | undefined{

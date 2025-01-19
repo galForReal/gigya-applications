@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {AppComponent} from './app.component';
 import {IndexGridComponent} from './index-grid/index-grid.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -60,6 +60,7 @@ const routes: Routes = [
 
   ],
   providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     provideTheming({
       defaultTheme: 'sap_horizon'
     }),],
