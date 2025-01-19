@@ -86,6 +86,11 @@ body {
   z-index: 1000;
 }
 
+.fd-list__item.is-focus:before,
+.fd-list__item:focus:before{
+  border:none !important;
+}
+
 .cdk-visually-hidden{
   display:none;
 }

@@ -30,9 +30,6 @@
         </div>
 
         <div fdLayoutGridCol colGrow>
-          @for (lang of defaultLanguages; track lang;) {
-            <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
-          }
           @for (lang of item?.languages ; track lang;) {
             <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
           }
