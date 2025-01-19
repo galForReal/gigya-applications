@@ -39,13 +39,13 @@
   </div>
 </fd-layout-grid>
 
-<fd-pagination
+<fd-pagination class="custom-pagination"
   [displayTotalItems]="false"
   [itemsPerPage]="itemsPerPage"
   [totalItems]="data?.length || 0"
   (pageChangeStart)="newPageClicked($event)"
   [currentPage]="currentPage"
-  ariaLabel="Basic pagination example"
+  ariaLabel="custom-pagination"
 ></fd-pagination>
 
 

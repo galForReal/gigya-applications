@@ -21,6 +21,11 @@ export class HomePageComponent implements OnInit{
     this.data$ = this.dataService.filterDataByName$(searchTerm);
   }
 
+  public clearSearch(){
+    this.searchTerm = '';
+    this.handleSearchTermChange('');
+  }
+
   ngOnInit(): void {
   }
 

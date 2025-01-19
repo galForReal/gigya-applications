@@ -56,7 +56,12 @@
             "styles": [
               "node_modules/fundamental-styles/dist/icon.css",
               "node_modules/fundamental-styles/dist/theming/sap_horizon.css",
-              "src/styles.css"
+              "src/styles.css",
+              {
+                "input": "src/theming/sap_horizon_fonts.css",
+                "inject": false,
+                "bundleName": "sap_horizon_fonts"
+              }
             ],
             "tsConfig": "tsconfig.json"
           }

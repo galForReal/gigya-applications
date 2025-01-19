@@ -3,6 +3,10 @@
   <fd-toolbar-spacer></fd-toolbar-spacer>
   <fd-input-group
     placeholder="Search flow"
+    glyph="decline"
+    glyphAriaLabel="Clear"
+    [button]="true"
+    (addOnButtonClicked)="clearSearch()"
     [disabled]="false"
     [(ngModel)]="searchTerm"
     (ngModelChange)="handleSearchTermChange($event)"
@@ -14,4 +18,3 @@
 <ng-container *ngIf=" data$ | async as data">
   <app-index-grid [data]="data"></app-index-grid>
 </ng-container>
-
