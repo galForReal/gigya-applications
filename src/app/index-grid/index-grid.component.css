@@ -3,3 +3,9 @@
 .table-header {border: 0}
 .table-header .head-text {font-weight:bold}
 .custom-pagination {margin-top: 26px}
+.fd-list__item {height: 40px}
+
+.fd-col {
+  padding-inline: .5rem;
+  font-size:18px
+}
