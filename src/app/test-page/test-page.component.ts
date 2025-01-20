@@ -23,37 +23,11 @@ import {QueryParams} from '../constants/enums';
   templateUrl: './test-page.component.html',
   styleUrl: './test-page.component.css'
 })
-export class TestPageComponent implements OnInit{
+export class TestPageComponent {
   protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.getDisplayParams();
   constructor(private route: ActivatedRoute, private dataService: DataService) {
   }
 
-  ngOnInit(): void {
-  }
-
-  // getDisplayParams(): Observable<IGigyaModuleItem> {
-  //   const dataParams$ = this.dataService.getTestById$(this.route.snapshot.queryParamMap.get(QueryParams.ID));
-  //   const routeParams$ = this.route.queryParams;
-  //
-  //   return combineLatest([dataParams$, routeParams$])
-  //     .pipe(
-  //       map(([data, routeParams]) => {
-  //         const startScreen = this.getStartScreen(data, routeParams);
-  //         return {
-  //           id: data?.id,
-  //           name: data?.name,
-  //           apiKey: data?.apiKey,
-  //           environment: data?.environment,
-  //           instructions: data?.instructions,
-  //           url: data?.url,
-  //           screenSet: routeParams[QueryParams.ScreenSet] || data?.screenSet,
-  //           ...(startScreen && { startScreen: startScreen}),
-  //           ...(routeParams[QueryParams.Language] && routeParams[QueryParams.Language] != 'en' && { selectedLang: routeParams[QueryParams.Language]}),
-  //           ...(routeParams[QueryParams.Popup] && { popup: routeParams[QueryParams.Popup]}),
-  //         } as IGigyaModuleItem
-  //       })
-  //     );
-  // }
 
   getDisplayParams(): Observable<IGigyaModuleItem> {
     return this.route.queryParams.pipe(
