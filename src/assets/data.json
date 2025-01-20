@@ -7,7 +7,7 @@
       "Launch screen",
       "Type a valid email",
       "User should see checkmark on the right side of the email field indicating valid input",
-      "Type a valid passwor",
+      "Type a valid password",
       "User should see \"password strength\" widget updating as the user types his password",
       "Launch screen",
       "Register with a user with invalid email to see control error"
