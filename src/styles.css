@@ -94,3 +94,8 @@ body {
 .cdk-visually-hidden{
   display:none;
 }
+
+.custom-search .fd-input-group {
+  height: 42px !important;
+  margin-bottom: 23px!important;
+  width: 260px !important;}
