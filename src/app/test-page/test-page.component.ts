@@ -1,16 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {
-  combineLatest,
   distinctUntilChanged,
   firstValueFrom,
-  forkJoin,
-  map,
   Observable,
-  of,
-  pipe,
   switchMap,
-  take,
-  takeUntil
 } from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
 import {DataService} from '../services/data.service';
