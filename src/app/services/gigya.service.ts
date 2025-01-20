@@ -34,24 +34,14 @@ export class GigyaService {
       node.type = 'text/javascript';
       node.async = true;
       node.id = this.SCRIPT_ID;
-      node.onload = () => {
-        console.log('Gigya script loaded');
-      };
+      node.onload = () => {};
       document.getElementsByTagName('head')[0].appendChild(node);
     }
     else {
       script.setAttribute('src', `https://cdns.${environment}.gigya.com/js/gigya.js?apikey=${apiKey}`);
-      if (this.gigyaReadyCallback) {
-        setTimeout(() => {
-          if (this.gigyaReadyCallback){
-            this.gigyaReadyCallback();
-          }}, 1000);
-        return;
-      }
     }
 
     this.globalWindow.onGigyaServiceReady = () => {
-      console.log('Gigya service is ready');
         if (this.gigyaReadyCallback) {
           this.gigyaReadyCallback();
         }
