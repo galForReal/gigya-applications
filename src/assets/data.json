@@ -18,7 +18,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -41,7 +40,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -64,7 +62,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -87,7 +84,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -112,7 +108,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -137,7 +132,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -158,7 +152,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -182,7 +175,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -204,7 +196,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -228,7 +219,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -253,7 +243,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -280,7 +269,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -305,7 +293,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -333,7 +320,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -355,7 +341,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -376,7 +361,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -397,7 +381,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -421,7 +404,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -448,7 +430,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -474,7 +455,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -500,7 +480,6 @@
   "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -528,7 +507,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -551,7 +529,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -576,7 +553,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -617,7 +593,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -644,7 +619,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -673,7 +647,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -702,7 +675,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -733,7 +705,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -764,7 +735,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -804,7 +774,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -829,7 +798,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -864,7 +832,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"},
       {"key":"Hindi", "value": "hi"},
       {"key":"Russian", "value": "ru"}
@@ -883,7 +850,6 @@
     "environment": "us1",
     "languages": [
       {"key": "Spanish", "value": "es" },
-      {"key": "Arabic", "value": "ar" },
       {"key": "German", "value": "de"}
     ]
   }
