@@ -11,8 +11,8 @@
       <div [fdLayoutGridCol]="3">
         <app-gigya-screen-instructions [instructions]="data.instructions"></app-gigya-screen-instructions>
       </div>
-      <div [fdLayoutGridCol]="1" class="sep"></div>
-      <div [fdLayoutGridCol]="8">
+      <div [fdLayoutGridCol]="9" class="sep">
+        <fd-message-strip type="information"> Only this page content needs to be tested for accessibility </fd-message-strip>
         @if (data?.url){
           <app-url-viewer
             [url]="data.url"

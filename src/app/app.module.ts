@@ -8,7 +8,7 @@ import {
   CardModule,
   GridListModule, IconComponent, LayoutGridModule, ListModule, ToolbarModule, ButtonComponent,
   provideTheming, ShellbarModule,
-  ThemingModule, InputGroupModule, SwitchComponent, PaginationModule
+  ThemingModule, InputGroupModule, SwitchComponent, PaginationModule, FormModule, MessageStripModule
 } from '@fundamental-ngx/core';
 import {RouterModule, RouterOutlet, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
@@ -56,6 +56,8 @@ const routes: Routes = [
     SwitchComponent,
     PaginationModule,
     FormsModule,
+    FormModule,
+    MessageStripModule,
     SafeUrlPipe,
 
   ],

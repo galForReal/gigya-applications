@@ -1,7 +1,6 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 import {Router} from '@angular/router';
-import {DefaultLanguages} from '../constants/consts';
 import {DataService} from '../services/data.service';
 import {AppStateService} from '../services/appStateService';
 
@@ -12,7 +11,6 @@ import {AppStateService} from '../services/appStateService';
 })
 export class IndexGridComponent implements OnChanges{
   @Input() data: IGigyaModuleItem[] | undefined;
-  defaultLanguages = DefaultLanguages;
   currentPage = 1;
   itemsPerPage: number = 10;
   pageItems: IGigyaModuleItem[] | undefined;

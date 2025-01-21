@@ -1,3 +1,4 @@
 .sep {
-  border-left: 1px solid #dbdbdb
+  border-left: 1px solid #dbdbdb;
+  min-height: 80vh;
 }
