@@ -31,7 +31,7 @@
 
         <div fdLayoutGridCol colGrow>
           @for (lang of item?.languages ; track lang;) {
-            <button fd-button fdType="ghost" fdCompact label="{{lang.key}}" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></button>
+            <a fd-button attr.aria-label="{{item.name}}" fdType="ghost" fdCompact label="{{lang.key}}" target="_blank" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></a>
           }
         </div>
       </li>
