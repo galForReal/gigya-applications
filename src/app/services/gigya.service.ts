@@ -8,22 +8,16 @@ export class GigyaService {
   readonly SCRIPT_ID = 'gigya-id';
   private gigyaReadyCallback: (() => void) | null = null;
   private readonly globalWindow: any;
-  private apiKey: string | undefined;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     this.globalWindow = document.defaultView;
   }
 
+  set callback(callback: () => void) {
+    this.gigyaReadyCallback = callback;
+  }
+
   loadGigyaScript(apiKey: string | undefined, environment: string | undefined) {
-    if (this.apiKey  && this.apiKey === apiKey) {
-      if (this.gigyaReadyCallback) {
-        this.gigyaReadyCallback();
-      }
-      return;
-    }
-
-    this.apiKey = apiKey;
-
     let script = document.getElementById(this.SCRIPT_ID);
     if(script && (script as HTMLScriptElement)?.src.indexOf(apiKey || '') > -1)
       return;
@@ -47,10 +41,5 @@ export class GigyaService {
         }
       }
     };
-
-
-  set callback(callback: () => void) {
-    this.gigyaReadyCallback = callback;
-  }
 }
 

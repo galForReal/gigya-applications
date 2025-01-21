@@ -3,3 +3,5 @@ export const DefaultLanguages = [
   { key: 'Arabic', value: 'ar' },
   { key: 'German', value: 'de' },
 ];
+
+export const STORAGE_NAME = 'gigya-application-app'
