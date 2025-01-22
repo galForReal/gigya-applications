@@ -2,19 +2,19 @@
   <div fdLayoutGridRow>
     <ul fd-list fdCompact>
       <li fd-list-item class="table-header">
-        <div [fdLayoutGridCol]="4" class="head-text">
+        <div [fdLayoutGridCol]="5" class="head-text">
           Flow (default language)
         </div>
         <div [fdLayoutGridCol]="3" class="head-text">
           Popup mode
         </div>
-        <div fdLayoutGridCol colGrow class="head-text">
-          Other available languages
-        </div>
+<!--        <div fdLayoutGridCol colGrow class="head-text">-->
+<!--          Other available languages-->
+<!--        </div>-->
       </li>
 
       <li fd-list-item *ngFor="let item of pageItems" >
-        <div [fdLayoutGridCol]="4">
+        <div [fdLayoutGridCol]="5">
           @if (!item.url){
             {{item.id}}. <a attr.aria-label="{{item.name}}" target="_blank" routerLink="testPage" [queryParams]="{ id: item.id, popup: item.popup }">{{item.name}}</a>
           } @else {
@@ -29,11 +29,11 @@
           </div>
         </div>
 
-        <div fdLayoutGridCol colGrow>
-          @for (lang of item?.languages ; track lang;) {
-            <a fd-button attr.aria-label="{{item.name}}" fdType="ghost" fdCompact label="{{lang.key}}" target="_blank" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></a>
-          }
-        </div>
+<!--        <div fdLayoutGridCol colGrow>-->
+<!--          @for (lang of item?.languages ; track lang;) {-->
+<!--            <a fd-button attr.aria-label="{{item.name}}" fdType="ghost" fdCompact label="{{lang.key}}" target="_blank" [routerLink]="['/testPage']" [queryParams]="{ id: item.id, lang: lang.value, popup: item.popup}"></a>-->
+<!--          }-->
+<!--        </div>-->
       </li>
     </ul>
   </div>
