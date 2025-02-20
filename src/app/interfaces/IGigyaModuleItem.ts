@@ -11,7 +11,7 @@ export interface IGigyaModuleItem {
   environment: string,
   languages?: KeyValue<string, string>[] | undefined,
   selectedLang?: string | undefined,
-  popup?: boolean;
+  popup?: string | undefined;
   url?: string;
   fullMode?:string | undefined;
 }

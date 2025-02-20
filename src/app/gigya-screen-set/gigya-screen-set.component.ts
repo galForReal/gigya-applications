@@ -14,7 +14,7 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   @Input() startScreen?: string;
   @Input() environment?: string;
   @Input() lang?: string;
-  @Input() popup?: boolean;
+  @Input() popup?: string | undefined;
   globalWindow: any;
   isLoading: boolean = true;
 
@@ -42,7 +42,7 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
 
   showScreenSet(){
     this.globalWindow['gigya']?.accounts?.showScreenSet({
-      ...(!this.popup && {containerID: 'containerId'}),
+      ...(this.popup !== 'true' && {containerID: 'containerId'}),
       screenSet: this.screenSet,
       ...(this.startScreen && {startScreen: this.startScreen}),
       ...(this.lang && {'lang': this.lang}),
