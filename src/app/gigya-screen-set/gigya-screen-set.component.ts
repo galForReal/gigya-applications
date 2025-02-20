@@ -45,7 +45,7 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
       ...(this.popup !== 'true' && {containerID: 'containerId'}),
       screenSet: this.screenSet,
       ...(this.startScreen && {startScreen: this.startScreen}),
-      ...(this.lang && {'lang': this.lang}),
+      //...(this.lang && {lang: this.lang}),
       onAfterScreenLoad: () => {
         this.zone.run(() => this.handleScreenLoad());
       },
@@ -56,11 +56,11 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   }
 
   handleScreenLoad(): void {
-    this.isLoading = false; // Hide the loader when the screen is ready
+    this.isLoading = false;
   }
 
   handleError(error: any): void {
-    this.isLoading = false; // Also hide the loader on error to avoid infinite loading
+    this.isLoading = false;
   }
 }
 
