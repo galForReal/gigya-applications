@@ -15,7 +15,7 @@ export class AppStateService {
     return this._state.value.pageNumber;
   }
 
-  set setPage(page:number){
+  set page(page:number){
     const clone = this._state.value;
     this._state.next({
       ...clone,

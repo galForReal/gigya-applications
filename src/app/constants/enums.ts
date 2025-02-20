@@ -3,5 +3,6 @@ export enum QueryParams {
   Language = 'lang',
   Popup = 'popup',
   ScreenSet = 'screenSet',
-  StartScreen = 'startScreen'
+  StartScreen = 'startScreen',
+  FullMode = 'fullMode'
 }

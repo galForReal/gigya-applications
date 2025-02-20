@@ -2,3 +2,16 @@
   border-left: 1px solid #dbdbdb;
   min-height: 80vh;
 }
+
+.hide-overflow{
+  overflow: hidden;
+}
+
+.menu-button{
+  margin: 0px 6px 2px 0px;
+}
+
+.hide{
+  display:none;
+}
+

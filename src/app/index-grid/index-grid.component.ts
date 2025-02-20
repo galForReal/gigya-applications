@@ -22,7 +22,7 @@ export class IndexGridComponent implements OnChanges{
 
   ngOnChanges(changes: SimpleChanges): void {
     if(this.dataService.isFiltered){
-      this.stateService.setPage = 1;
+      this.stateService.page = 1;
     }
     this.currentPage = this.stateService.page;
     this.updateDisplayedItems();
@@ -33,7 +33,7 @@ export class IndexGridComponent implements OnChanges{
   }
 
   newPageClicked(page: number) {
-    this.stateService.setPage = page;
+    this.stateService.page = page;
     this.currentPage = page;
     this.updateDisplayedItems();
   }
