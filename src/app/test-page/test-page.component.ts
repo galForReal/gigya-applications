@@ -5,11 +5,10 @@ import {
   Observable,
   switchMap,
 } from 'rxjs';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {DataService} from '../services/data.service';
 import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
 import {QueryParams} from '../constants/enums';
-
 
 @Component({
   selector: 'app-test-page',
@@ -18,15 +17,35 @@ import {QueryParams} from '../constants/enums';
 })
 export class TestPageComponent {
   protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.getDisplayParams();
-  constructor(private route: ActivatedRoute, private dataService: DataService) {
-  }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private dataService: DataService) {}
 
+  toggleScreenMode(fullMode: string | undefined) {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {'fullMode' : !this.isFullMode(fullMode) },
+      queryParamsHandling: 'merge',
+    });
+
+  }
+  instructionWidth(fullMode: string | undefined){
+    return this.isFullMode(fullMode) ?  0 : 3;
+  }
+  mainWidth(fullMode: string | undefined){
+    return this.isFullMode(fullMode) ?  12 : 9;
+ }
+
+ isFullMode(fullMode: string | undefined){
+    return fullMode == 'true'
+ }
 
   getDisplayParams(): Observable<IGigyaModuleItem> {
     return this.route.queryParams.pipe(
       distinctUntilChanged(),
       switchMap(async routeParams => {
-        const data = await firstValueFrom(this.dataService.getTestById$(routeParams['id']));
+        const data = await firstValueFrom(this.dataService.getTestById$(routeParams[QueryParams.ID]));
         const startScreen = this.getStartScreen(data, routeParams);
 
         return {
@@ -37,10 +56,11 @@ export class TestPageComponent {
           instructions: data?.instructions,
           url: data?.url,
           screenSet: routeParams[QueryParams.ScreenSet] || data?.screenSet,
+          fullMode: routeParams[QueryParams.FullMode],
           ...(startScreen && { startScreen: startScreen}),
           ...(routeParams[QueryParams.Language] && routeParams[QueryParams.Language] != 'en' && { selectedLang: routeParams[QueryParams.Language]}),
           ...(routeParams[QueryParams.Popup] && { popup: routeParams[QueryParams.Popup]}),
-        } as IGigyaModuleItem
+        } as IGigyaModuleItem;
       })
     )
   }

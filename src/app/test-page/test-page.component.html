@@ -1,18 +1,17 @@
 <ng-container *ngIf="gigyaModule$ | async as data">
 
-<fd-toolbar>
+<fd-toolbar class="hide-overflow">
+  <button fd-button class="menu-button" fdType="transparent" glyph="menu2" ariaLabel="toggle menu " title="toggle menu" (click)="toggleScreenMode(data.fullMode)"></button>
   <h2 fd-toolbar-label>{{data.id}}. {{data.name}} </h2>
   <fd-toolbar-spacer></fd-toolbar-spacer>
 </fd-toolbar>
 
-
  <fd-layout-grid>
     <div fdLayoutGridRow>
-      <div [fdLayoutGridCol]="3">
+      <div [fdLayoutGridCol]="instructionWidth(data.fullMode)" [ngClass]="{ 'hide': this.isFullMode(data.fullMode)}">
         <app-gigya-screen-instructions [instructions]="data.instructions"></app-gigya-screen-instructions>
       </div>
-      <div [fdLayoutGridCol]="9" class="sep">
-        <fd-message-strip type="information"> Only this page content needs to be tested for accessibility </fd-message-strip>
+      <div [fdLayoutGridCol]="mainWidth(data.fullMode)" [ngClass]="{ 'sep': !this.isFullMode(data.fullMode)}">
         @if (data?.url){
           <app-url-viewer
             [url]="data.url"
