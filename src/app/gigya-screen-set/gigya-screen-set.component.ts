@@ -29,8 +29,7 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
     //this.loadScript();
     this.gigyaService.callback = () => {this.showScreenSet();};
     this.gigyaService.loadGigyaScript(this.apiKey, this.environment);
-
-
+    this.setHtmlLanguage(this.lang);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -53,6 +52,14 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
         this.zone.run(() => this.handleError(error));
       }
     });
+  }
+
+  public setHtmlLanguage(lang: string | undefined) {
+    if (typeof lang === "string" && lang?.length === 2) {
+      document.documentElement.lang = lang;
+    } else {
+      document.documentElement.lang = 'en';
+    }
   }
 
   handleScreenLoad(): void {
