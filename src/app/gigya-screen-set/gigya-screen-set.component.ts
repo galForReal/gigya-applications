@@ -1,4 +1,14 @@
-import {Component, Inject, Input, NgZone, OnChanges, OnInit, SimpleChange, SimpleChanges} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Inject,
+  Input,
+  NgZone,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges
+} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 import {GigyaService} from '../services/gigya.service';
 
@@ -15,6 +25,7 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   @Input() environment?: string;
   @Input() lang?: string;
   @Input() popup?: string | undefined;
+  @Output() formStatus = new EventEmitter<string>()
   globalWindow: any;
   isLoading: boolean = true;
 
@@ -50,6 +61,12 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
       },
       onError: (error: any) => {
         this.zone.run(() => this.handleError(error));
+      },
+      onFieldChanged: (params: any) => {
+        this.zone.run(() => this.handleFieldChange());
+      },
+      onAfterSubmit: (params:any): void => {
+          this.zone.run(() => this.handleOnAfterSubmit());
       }
     });
   }
@@ -69,5 +86,14 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   handleError(error: any): void {
     this.isLoading = false;
   }
+
+  handleFieldChange() {
+    this.formStatus.emit('');
+  }
+  handleOnAfterSubmit(): void {
+    this.formStatus.emit('your form submitted successfully');
+  }
+
+
 }
 

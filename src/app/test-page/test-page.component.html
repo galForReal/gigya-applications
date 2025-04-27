@@ -6,6 +6,10 @@
   <fd-toolbar-spacer></fd-toolbar-spacer>
 </fd-toolbar>
 
+  <div aria-live="assertive" aria-atomic="true" class="status visually-hidden">
+    {{formState}}
+  </div>
+
  <fd-layout-grid>
     <div fdLayoutGridRow>
       <div [fdLayoutGridCol]="instructionWidth(data.fullMode)" [ngClass]="{ 'hide': this.isFullMode(data.fullMode)}">
@@ -26,6 +30,7 @@
             [startScreen]="data.startScreen"
             [lang]="data?.selectedLang"
             [popup]="data?.popup"
+            (formStatus)="onFormStatus($event)"
           ></app-gigya-screen-set>
         }
       </div>

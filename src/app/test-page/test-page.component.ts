@@ -17,6 +17,7 @@ import {QueryParams} from '../constants/enums';
 })
 export class TestPageComponent {
   protected gigyaModule$: Observable<IGigyaModuleItem | undefined> = this.getDisplayParams();
+  formState: string = '';
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -70,5 +71,9 @@ export class TestPageComponent {
       return routeParams[QueryParams.StartScreen];
     else
       return data?.startScreen ?? undefined
+  }
+
+  onFormStatus($event: string) {
+    this.formState = $event;
   }
 }
