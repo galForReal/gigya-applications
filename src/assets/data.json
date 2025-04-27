@@ -175,7 +175,7 @@
     "languages": []
   },
   {
-    "id": "11",
+    "id": "12",
     "name": "Login with Magic link - Password-Less flows",
     "description": "simple flow",
     "instructions": [
@@ -194,7 +194,7 @@
     "languages": []
   },
   {
-    "id": "12",
+    "id": "13",
     "name": "Login with email code - Password-Less flows",
     "description": "simple flow",
     "instructions": [
@@ -215,7 +215,7 @@
     "languages": []
   },
   {
-    "id": "13",
+    "id": "14",
     "name": "Login with password - Password-Less flows",
     "description": "simple flow",
     "instructions": [
@@ -234,7 +234,7 @@
     "languages": []
   },
   {
-    "id": "14",
+    "id": "15",
     "name": "Login with Email TFA",
     "description": "simple flow",
     "instructions": [
@@ -256,7 +256,7 @@
     "languages": []
   },
   {
-    "id": "15",
+    "id": "16",
     "name": "Login with SMS TFA",
     "description": "simple flow",
     "instructions": [
@@ -272,7 +272,7 @@
     "languages": []
   },
   {
-    "id": "16",
+    "id": "17",
     "name": "Login with TOTP TFA",
     "description": "simple flow",
     "instructions": [
@@ -287,7 +287,7 @@
     "languages": []
   },
   {
-    "id": "17",
+    "id": "18",
     "name": "Login with mobile phone number",
     "description": "simple flow",
     "instructions": [
@@ -302,7 +302,7 @@
     "languages": []
   },
   {
-    "id": "18",
+    "id": "19",
     "name": "User forgot password and reset it",
     "description": "simple flow",
     "instructions": [
@@ -320,7 +320,7 @@
     "languages": []
   },
   {
-    "id": "19",
+    "id": "20",
     "name": "User forgot password and reset it",
     "description": "simple flow",
     "instructions": [
@@ -341,7 +341,7 @@
     "languages": []
   },
   {
-    "id": "20",
+    "id": "21",
     "name": "Re-authenticate with email",
     "description": "simple flow",
     "instructions": [
@@ -361,7 +361,7 @@
     "languages": []
   },
   {
-  "id": "21",
+  "id": "22",
   "name": "Re-authenticate with social network",
   "description": "simple flow",
     "instructions": [
@@ -381,7 +381,7 @@
     "languages": []
   },
   {
-    "id": "22",
+    "id": "23",
     "name": "User forgot password during re-authentication flow",
     "description": "simple flow",
     "instructions": [
@@ -403,7 +403,7 @@
     "languages": []
   },
   {
-    "id": "23",
+    "id": "24",
     "name": "Link accounts",
     "description": "simple flow",
     "instructions": [
@@ -420,7 +420,7 @@
     "languages": []
   },
   {
-    "id": "24",
+    "id": "25",
     "name": "User forgot password during Link account flow",
     "description": "simple flow",
     "instructions": [
@@ -439,7 +439,7 @@
     "languages": []
   },
   {
-    "id": "25",
+    "id": "26",
     "name": "Edit profile (Consent, subscription, radio buttons)",
     "description": "simple flow",
     "instructions": [
@@ -474,7 +474,7 @@
     "languages": []
   },
   {
-    "id": "26",
+    "id": "27",
     "name": "Change password via edit profile",
     "description": "simple flow",
     "instructions": [
@@ -495,7 +495,7 @@
     "languages": []
   },
   {
-    "id": "27",
+    "id": "28",
     "name": "Set or edit phone number via edit profile",
     "description": "simple flow",
     "instructions": [
@@ -518,7 +518,7 @@
     "languages": []
   },
   {
-    "id": "28",
+    "id": "29",
     "name": "Set or edit email (with OTP verification) via edit profile",
     "description": "simple flow",
     "instructions": [
@@ -541,7 +541,7 @@
     "languages": []
   },
   {
-    "id": "29",
+    "id": "30",
     "name": "Change SMS TFA device",
     "description": "simple flow",
     "instructions": [
@@ -591,7 +591,7 @@
     "languages": []
   },
   {
-    "id": "31",
+    "id": "32",
     "name": "Use backup code (while TOTP TFA enabled)",
     "description": "simple flow",
     "instructions": [
@@ -625,7 +625,7 @@
     "languages": []
   },
   {
-    "id": "32",
+    "id": "33",
     "name": "Link between site user and social user (Add connection)",
     "description": "simple flow",
     "instructions": [
@@ -644,7 +644,7 @@
     "languages": []
   },
   {
-    "id": "33",
+    "id": "34",
     "name": "Subscribe to subscription channels",
     "description": "simple flow",
     "instructions": [
@@ -673,7 +673,7 @@
     "languages": []
   },
   {
-    "id": "34",
+    "id": "35",
     "name": "Use hosted pages to login",
     "description": "simple flow",
     "instructions": [
