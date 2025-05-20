@@ -4,11 +4,24 @@ import {AppComponent} from './app.component';
 import {IndexGridComponent} from './index-grid/index-grid.component';
 import {HttpClientModule} from '@angular/common/http';
 import {
-  AvatarComponent, BusyIndicatorModule,
+  AvatarComponent,
+  BusyIndicatorModule,
   CardModule,
-  GridListModule, IconComponent, LayoutGridModule, ListModule, ToolbarModule, ButtonComponent,
-  provideTheming, ShellbarModule,
-  ThemingModule, InputGroupModule, SwitchComponent, PaginationModule, FormModule, MessageStripModule
+  GridListModule,
+  IconComponent,
+  LayoutGridModule,
+  ListModule,
+  ToolbarModule,
+  ButtonComponent,
+  provideTheming,
+  ShellbarModule,
+  ThemingModule,
+  InputGroupModule,
+  SwitchComponent,
+  PaginationModule,
+  FormModule,
+  MessageStripModule,
+  MessageToastModule,
 } from '@fundamental-ngx/core';
 import {RouterModule, RouterOutlet, Routes} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
@@ -19,6 +32,7 @@ import {GigyaScreenInstructionsComponent} from './gigya-screen-instructions/gigy
 import {FormsModule} from '@angular/forms';
 import {UrlViewerComponent} from './url-viewer/url-viewer.component';
 import {SafeUrlPipe} from './pipes/safe-url-pipe.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {path:'', component:HomePageComponent},
@@ -59,7 +73,8 @@ const routes: Routes = [
     FormModule,
     MessageStripModule,
     SafeUrlPipe,
-
+    MessageToastModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },

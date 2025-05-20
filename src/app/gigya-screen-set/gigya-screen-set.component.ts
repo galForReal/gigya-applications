@@ -25,7 +25,7 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   @Input() environment?: string;
   @Input() lang?: string;
   @Input() popup?: string | undefined;
-  @Output() formStatus = new EventEmitter<string>()
+  @Output() submitStatus = new EventEmitter<number>()
   globalWindow: any;
   isLoading: boolean = true;
 
@@ -65,8 +65,8 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
       onFieldChanged: (params: any) => {
         this.zone.run(() => this.handleFieldChange());
       },
-      onAfterSubmit: (params:any): void => {
-          this.zone.run(() => this.handleOnAfterSubmit());
+      onAfterSubmit: (response:any): void => {
+          this.zone.run(() => this.handleOnAfterSubmit(response));
       }
     });
   }
@@ -88,10 +88,10 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   }
 
   handleFieldChange() {
-    this.formStatus.emit('');
   }
-  handleOnAfterSubmit(): void {
-    this.formStatus.emit('your form submitted successfully');
+
+  handleOnAfterSubmit(response: any): void {
+    this.submitStatus.emit(response?.response?.errorCode);
   }
 
 

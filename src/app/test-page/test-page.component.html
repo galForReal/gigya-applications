@@ -6,9 +6,10 @@
   <fd-toolbar-spacer></fd-toolbar-spacer>
 </fd-toolbar>
 
-  <div aria-live="assertive" aria-atomic="true" class="status visually-hidden">
-    {{formState}}
-  </div>
+  <ng-template [fdMessageBoxTemplate] let-messageToast #template>
+    {{ messageToast.data.content }}
+  </ng-template>
+
 
  <fd-layout-grid>
     <div fdLayoutGridRow>
@@ -30,7 +31,7 @@
             [startScreen]="data.startScreen"
             [lang]="data?.selectedLang"
             [popup]="data?.popup"
-            (formStatus)="onFormStatus($event)"
+            (submitStatus)="handleAfterSubmitMessageDisplay($event)"
           ></app-gigya-screen-set>
         }
       </div>
