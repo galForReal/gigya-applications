@@ -92,9 +92,9 @@ export class TestPageComponent {
         this.toastDisplay('your form was submitted successfully');
         break;
       default:
-        if (PendingErrorAttributes[errorCode]) {
-          this.toastDisplay('your form was submitted successfully. you have been redirected to complete the process');
-        }
+        // if (PendingErrorAttributes[errorCode]) {
+        //   this.toastDisplay('your form was submitted successfully. you have been redirected to complete the process');
+        // }
         break;
     }
   }
