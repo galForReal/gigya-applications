@@ -13,7 +13,7 @@
       "Register with a user with invalid email to see control error"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -30,7 +30,7 @@
       "Fill any value in Postcode field, accept terms and click submit"
     ],
     "apiKey": "4_tTso9rMByVxNRGefBxyjTA",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -47,7 +47,7 @@
       "Fill received SMS and click submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -64,7 +64,7 @@
       "Fill the code from the authenticator app and click submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -83,7 +83,7 @@
       "User should be redirected to confirmation screen where he can type a different email address"
     ],
     "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -102,7 +102,7 @@
       "Check your email and fill the latest code you received to complete verification"
     ],
     "apiKey": "4_yT812G2FYJS8-JsK8OXMRQ",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -117,7 +117,7 @@
       "User redirected to confirmation screen"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-LiteRegistration",
+    "screenSet": "acc_ver3-LiteRegistration",
     "startScreen": "gigya-subscribe-with-email-screen",
     "environment": "us1",
     "languages": []
@@ -135,7 +135,7 @@
       "Set a valid password and confirm"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-LiteRegistration",
+    "screenSet": "acc_ver3-LiteRegistration",
     "startScreen": "gigya-subscribe-with-email-screen",
     "environment": "us1",
     "languages": []
@@ -151,7 +151,7 @@
       "Login with non existing user to see form errors: non@existing.com / qwerty"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -169,7 +169,7 @@
       "User is forwarded to \"Password Change\" screen"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -188,7 +188,7 @@
       "Check your email and complete login with the given link"
     ],
     "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
-    "screenSet": "New_08-01-24-PasswordlessLogin",
+    "screenSet": "acc_ver3-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
     "languages": []
@@ -209,7 +209,7 @@
       "Launch screen Register with a user with invalid email to see control error"
     ],
     "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
-    "screenSet": "New_08-01-24-PasswordlessLogin",
+    "screenSet": "acc_ver3-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
     "languages": []
@@ -228,7 +228,7 @@
       "Fill password and click Submit"
     ],
     "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
-    "screenSet": "New_08-01-24-PasswordlessLogin",
+    "screenSet": "acc_ver3-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
     "languages": []
@@ -242,7 +242,7 @@
       "Register with a valid email and confirm email using the link that was sent via email",
       {
         "linkText": "launch",
-        "screenSet": "New_08-01-24-RegistrationLogin",
+        "screenSet": "acc_ver3-RegistrationLogin",
         "startScreen": "gigya-login-screen",
         "preLinkText": "Login with the same user at"
       },
@@ -250,7 +250,7 @@
       "Use the code sent by email and complete login"
     ],
     "apiKey": "4_Lq73PDxVL9tGmbCG7Xlocg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -266,7 +266,7 @@
       "Fill the SMS code you got and click Submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -281,7 +281,7 @@
       "Fill the TOTP code from your authenticator app and click Submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -296,7 +296,7 @@
       "Enter the one-time code to complete the login"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-mobile-login-screen",
     "environment": "us1",
     "languages": []
@@ -314,7 +314,7 @@
       "Change your password"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -335,7 +335,7 @@
       "User is forwarded to confirmation screen"
     ],
     "apiKey": "4_cY45soSfPdn59wnPcykFbg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -349,13 +349,13 @@
       "Login with valid user: test@test.com / qwerty",
       {
         "linkText": "Launch re-authenticate screen",
-        "screenSet": "New_08-01-24-ReAuthentication",
+        "screenSet": "acc_ver3-ReAuthentication",
         "startScreen": "gigya-reauthentication-screen"
       },
       "Login again with the same user"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -369,13 +369,13 @@
       "Login with valid social user ",
       {
         "linkText": "Launch re-authenticate screen",
-        "screenSet": "New_08-01-24-ReAuthentication",
+        "screenSet": "acc_ver3-ReAuthentication",
         "startScreen": "gigya-reauthentication-screen"
       },
       "Login again with the same social user"
     ],
   "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-  "screenSet": "New_08-01-24-RegistrationLogin",
+  "screenSet": "acc_ver3-RegistrationLogin",
   "startScreen": "gigya-login-screen",
   "environment": "us1",
     "languages": []
@@ -389,7 +389,7 @@
       "Login with valid user: test@test.com / qwerty",
       {
         "linkText": "Launch re-authenticate screen",
-        "screenSet": "New_08-01-24-ReAuthentication",
+        "screenSet": "acc_ver3-ReAuthentication",
         "startScreen": "gigya-reauthentication-screen"
       },
       "Click on \"forgot password\" link",
@@ -397,7 +397,7 @@
       "User forwarded to confirmation screen"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -414,7 +414,7 @@
       "* Do not complete link account flow so you will be able to repeat this scenario as many times as needed"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -433,7 +433,7 @@
       "User forwarded to confirmation screen"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -450,25 +450,25 @@
       "Fill any value in postcode field, accept terms and click submit",
       {
         "linkText": "launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-update-profile-screen",
         "postLinkText": "Edit profile screen to watch profile details and edit it"
       },
       {
         "linkText": "launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-communication-screen",
         "postLinkText": "Review settings also at Communication page"
       },
       {
         "linkText": "launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-privacy-screen",
         "postLinkText": "Launch Review settings also Privacy page"
       }
     ],
     "apiKey": "4_tTso9rMByVxNRGefBxyjTA",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -482,14 +482,14 @@
       "Login with a valid user or register with valid user with email",
       {
         "linkText": "launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-update-profile-screen",
         "postLinkText": "Edit profile screen to watch profile details and edit it"
       },
       "Click Change password to change it"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -503,7 +503,7 @@
       "Login with a valid user or register with valid user with email",
       {
         "linkText": "launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-update-profile-screen",
         "postLinkText": "Edit profile screen to watch profile details and edit it"
       },
@@ -512,7 +512,7 @@
       "Provide the code and click verify to complete the process"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -526,7 +526,7 @@
       "Login with a valid user or register with valid user with email",
       {
         "linkText": "launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-update-profile-screen",
         "postLinkText": "Edit profile screen to watch profile details and edit it"
       },
@@ -535,7 +535,7 @@
       "Provide the code and click verify to complete the process"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -552,7 +552,7 @@
       "Fill received SMS and click submit",
       {
         "linkText": "Launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-update-profile-screen",
         "postLinkText": "Edit profile screen to watch profile details"
       },
@@ -560,7 +560,7 @@
       "Click \"Edit\" to change device, set a new device and verify it by ocde"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -577,7 +577,7 @@
       "Fill the code from the authenticator app and click submit",
       {
         "linkText": "Launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-update-profile-screen",
         "postLinkText": "Edit profile screen to watch profile details"
       },
@@ -585,7 +585,7 @@
       "Click \"Change Device\" to change device, scan a new QA code and confirm"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -602,7 +602,7 @@
       "Fill the code from the authenticator app and click submit",
       {
         "linkText": "Launch",
-        "screenSet": "New_08-01-24-ProfileUpdate",
+        "screenSet": "acc_ver3-ProfileUpdate",
         "startScreen": "gigya-update-profile-screen",
         "postLinkText": "Edit profile screen to watch profile details"
       },
@@ -611,7 +611,7 @@
       "Click \"Generate new codes\" to generate a new set. Remember one code",
       {
         "linkText": "Launch",
-        "screenSet": "New_08-01-24-RegistrationLogin",
+        "screenSet": "acc_ver3-RegistrationLogin",
         "startScreen": "gigya-login-screen",
         "postLinkText": "login screen and try to login"
       },
@@ -619,7 +619,7 @@
       "Use the code you remembered on previous step to complete login"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": []
@@ -638,7 +638,7 @@
       "On \"Gigya Edit connection UI\": \"connect\" link changes to \"disconnect\""
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
@@ -653,7 +653,7 @@
       "Launch",
       {
         "linkText": "Launch",
-        "screenSet": "New_08-01-24-Subscriptions",
+        "screenSet": "acc_ver3-Subscriptions",
         "startScreen": "gigya-sms-subscription-subscribe-full-screen",
         "postLinkText": "Subscription screen"
       },
@@ -667,7 +667,7 @@
       "Number should be verified : \"verified\" text should appear"
     ],
     "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-    "screenSet": "New_08-01-24-RegistrationLogin",
+    "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": []
