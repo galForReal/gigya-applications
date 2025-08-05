@@ -188,7 +188,7 @@
       "Check your email and complete login with the given link"
     ],
     "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
-    "screenSet": "acc_ver3-PasswordlessLogin",
+    "screenSet": "acc_ver3.5-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
     "languages": []
@@ -209,7 +209,7 @@
       "Launch screen Register with a user with invalid email to see control error"
     ],
     "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
-    "screenSet": "acc_ver3-PasswordlessLogin",
+    "screenSet": "acc_ver3.5-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
     "languages": []
@@ -228,7 +228,7 @@
       "Fill password and click Submit"
     ],
     "apiKey": "4_PiuFPH57M1fzWnSnYaw_Mw",
-    "screenSet": "acc_ver3-PasswordlessLogin",
+    "screenSet": "acc_ver3.5-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
     "languages": []
