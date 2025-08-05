@@ -16,12 +16,12 @@ export class DataService {
 
 
   get data$():Observable<IGigyaModuleItem[]> {
-    const savedState = this.getSavedState();
+    //const savedState = this.getSavedState();
 
-    if(savedState){
-      this._data.next(savedState.data);
-    }
-    else if(!this._data.value?.length)
+    // if(savedState){
+    //   this._data.next(savedState.data);
+    // }
+    if(!this._data.value?.length)
     {
       this.populateData();
     }
@@ -32,7 +32,7 @@ export class DataService {
   private async populateData(){
     const data= await firstValueFrom(this.http.get<any[]>(this.dataUrl));
     this._data.next(data);
-    await this.saveState(data);
+    //await this.saveState(data);
   }
 
 
@@ -46,6 +46,7 @@ export class DataService {
         filter(x => x != undefined)
       );
   }
+
   public filterDataByName$(searchTerm: string):Observable<IGigyaModuleItem[]>{
     if(searchTerm?.length <= 1){
       this._isFiltered = false;
@@ -56,26 +57,27 @@ export class DataService {
     return this.data$.pipe(
       map(array => array.filter((item) => item.name.toLowerCase().includes(searchTerm))));
   }
+
   public async update(item:IGigyaModuleItem){
     const clone = this._data.value;
     const index = clone.findIndex(x=> x.id == item.id);
     if(index > -1){
       clone[index] = item;
       this._data.next(clone);
-      await this.saveState(clone);
+      //await this.saveState(clone);
     }
   }
 
-  private async saveState(data:IGigyaModuleItem[]) {
-    const stateObject = {
-      data: data,
-    };
-    localStorage.setItem(STORAGE_NAME, JSON.stringify(stateObject));
-  }
+  // private async saveState(data:IGigyaModuleItem[]) {
+  //   const stateObject = {
+  //     data: data,
+  //   };
+  //   localStorage.setItem(STORAGE_NAME, JSON.stringify(stateObject));
+  // }
 
-  private getSavedState() {
-    const session = localStorage.getItem(STORAGE_NAME);
-    return session ? JSON.parse(session) : undefined;
-  }
+  // private getSavedState() {
+  //   const session = localStorage.getItem(STORAGE_NAME);
+  //   return session ? JSON.parse(session) : undefined;
+  // }
 
 }
