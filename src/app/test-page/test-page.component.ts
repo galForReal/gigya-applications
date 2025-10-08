@@ -102,7 +102,7 @@ export class TestPageComponent {
 
   toastDisplay(status: string) {
     this.messageToastService.open(status, {
-      duration: 8000,
+      duration: 3000,
       positionStrategy: ToastTopCenterPosition
     });
   }
