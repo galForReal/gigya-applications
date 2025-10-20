@@ -7,7 +7,7 @@ import {
 } from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
 import {DataService} from '../services/data.service';
-import {IGigyaModuleItem} from '../interfaces/IGigyaModuleItem';
+import {IGigyaModuleItem, IClickEventData} from '../interfaces/IGigyaModuleItem';
 import {QueryParams} from '../constants/enums';
 import {MessageToastService} from '@fundamental-ngx/core/message-toast';
 import {ToastTopCenterPosition} from '@fundamental-ngx/cdk/utils';
@@ -84,23 +84,29 @@ export class TestPageComponent {
   }
 
 
-  handleAfterSubmitMessageDisplay(errorCode?: number) {
-    switch (errorCode) {
+  handleSubmitEvent(clickEvent: IClickEventData): void {
+    switch (clickEvent.errorCode) {
       case undefined:
         return;
       case 0:
-        this.toastDisplay('your form was submitted successfully');
+        this.toastMessageDisplay('your form was submitted successfully');
         break;
       default:
-        // if (PendingErrorAttributes[errorCode]) {
-        //   this.toastDisplay('your form was submitted successfully. you have been redirected to complete the process');
-        // }
         break;
     }
   }
 
 
-  toastDisplay(status: string) {
+  handleClickEvent(clickEvent: IClickEventData): void {
+    switch (clickEvent.buttonId) {
+      case 'copied-to-clipboard':
+        this.toastMessageDisplay('copied to clipboard');
+        break;
+    }
+  }
+
+
+  toastMessageDisplay(status: string) {
     this.messageToastService.open(status, {
       duration: 3000,
       positionStrategy: ToastTopCenterPosition

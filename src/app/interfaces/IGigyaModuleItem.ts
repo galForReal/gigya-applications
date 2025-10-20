@@ -24,4 +24,9 @@ export interface ILinkInformation {
   postLinkText?: string
 }
 
+export interface IClickEventData {
+  errorCode:number,
+  buttonId?: string
+}
+
 

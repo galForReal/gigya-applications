@@ -31,7 +31,8 @@
             [startScreen]="data.startScreen"
             [lang]="data?.selectedLang"
             [popup]="data?.popup"
-            (submitStatus)="handleAfterSubmitMessageDisplay($event)"
+            (submitEvent)="handleSubmitEvent($event)"
+            (clickEvent)="handleClickEvent($event)"
           ></app-gigya-screen-set>
         }
       </div>

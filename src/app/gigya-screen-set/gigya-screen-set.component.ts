@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 import {GigyaService} from '../services/gigya.service';
+import {IClickEventData} from '../interfaces/IGigyaModuleItem';
 
 @Component({
   selector: 'app-gigya-screen-set',
@@ -25,7 +26,8 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   @Input() environment?: string;
   @Input() lang?: string;
   @Input() popup?: string | undefined;
-  @Output() submitStatus = new EventEmitter<number>()
+  @Output() submitEvent = new EventEmitter<IClickEventData>();
+  @Output() clickEvent = new EventEmitter<IClickEventData>();
   globalWindow: any;
   isLoading: boolean = true;
 
@@ -67,7 +69,10 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
       },
       onAfterSubmit: (response:any): void => {
           this.zone.run(() => this.handleOnAfterSubmit(response));
-      }
+      },
+      onButtonClicked: (params: any) => {
+        this.zone.run(() => this.handleButtonClick(params));
+      },
     });
   }
 
@@ -91,9 +96,11 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   }
 
   handleOnAfterSubmit(response: any): void {
-    this.submitStatus.emit(response?.response?.errorCode);
+    this.submitEvent.emit({errorCode: response?.response?.errorCode});
   }
 
-
+  handleButtonClick(params: any): void {
+    this.clickEvent.emit({errorCode: 0, buttonId: params?.button?.buttonID});
+  }
 }
 
