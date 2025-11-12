@@ -16,7 +16,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "2",
@@ -33,7 +34,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "3",
@@ -50,7 +52,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "4",
@@ -67,7 +70,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "5",
@@ -86,7 +90,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "6",
@@ -105,7 +110,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "7",
@@ -120,7 +126,8 @@
     "screenSet": "acc_ver3-LiteRegistration",
     "startScreen": "gigya-subscribe-with-email-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "8",
@@ -138,7 +145,8 @@
     "screenSet": "acc_ver3-LiteRegistration",
     "startScreen": "gigya-subscribe-with-email-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "9",
@@ -154,7 +162,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "10",
@@ -172,7 +181,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "12",
@@ -191,7 +201,8 @@
     "screenSet": "acc_ver3.5-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": true
   },
   {
     "id": "13",
@@ -212,7 +223,8 @@
     "screenSet": "acc_ver3.5-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": true
   },
   {
     "id": "14",
@@ -231,7 +243,8 @@
     "screenSet": "acc_ver3.5-PasswordlessLogin",
     "startScreen": "gigya-passwordless-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": true
   },
   {
     "id": "15",
@@ -253,7 +266,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "16",
@@ -269,7 +283,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "17",
@@ -284,7 +299,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "18",
@@ -299,7 +315,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-mobile-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "19",
@@ -317,7 +334,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "20",
@@ -338,7 +356,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "21",
@@ -358,12 +377,13 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
-  "id": "22",
-  "name": "Re-authenticate with social network",
-  "description": "simple flow",
+    "id": "22",
+    "name": "Re-authenticate with social network",
+    "description": "simple flow",
     "instructions": [
       "Launch screen",
       "Login with valid social user ",
@@ -374,11 +394,12 @@
       },
       "Login again with the same social user"
     ],
-  "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
-  "screenSet": "acc_ver3-RegistrationLogin",
-  "startScreen": "gigya-login-screen",
-  "environment": "us1",
-    "languages": []
+    "apiKey": "4_6YudR0tpdevfMMVJmD8isg",
+    "screenSet": "acc_ver3-RegistrationLogin",
+    "startScreen": "gigya-login-screen",
+    "environment": "us1",
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "23",
@@ -400,7 +421,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "24",
@@ -417,7 +439,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "25",
@@ -436,7 +459,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "26",
@@ -471,7 +495,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "27",
@@ -492,7 +517,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "28",
@@ -515,7 +541,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "29",
@@ -538,7 +565,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "30",
@@ -563,7 +591,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "30",
@@ -588,7 +617,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "32",
@@ -622,7 +652,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "33",
@@ -641,7 +672,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "34",
@@ -670,7 +702,8 @@
     "screenSet": "acc_ver3-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   },
   {
     "id": "35",
@@ -683,6 +716,7 @@
     ],
     "url": "https://344270779722.us1.my.gigya-ext.com/pages/login",
     "environment": "us1",
-    "languages": []
+    "languages": [],
+    "disabled": false
   }
 ]
