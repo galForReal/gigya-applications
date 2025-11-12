@@ -31,7 +31,7 @@ export class DataService {
 
   private async populateData(){
     const data= await firstValueFrom(this.http.get<any[]>(this.dataUrl));
-    this._data.next(data);
+    this._data.next(data.filter(item => item?.disabled !== true).map(item => ({ ...item })));
     //await this.saveState(data);
   }
 
