@@ -1,5 +1,5 @@
 import {
-  Component,
+  Component, ElementRef,
   EventEmitter,
   Inject,
   Input,
@@ -7,7 +7,7 @@ import {
   OnChanges,
   OnInit,
   Output,
-  SimpleChanges
+  SimpleChanges, ViewChild
 } from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 import {GigyaService} from '../services/gigya.service';
@@ -28,6 +28,7 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
   @Input() popup?: string | undefined;
   @Output() submitEvent = new EventEmitter<IClickEventData>();
   @Output() clickEvent = new EventEmitter<IClickEventData>();
+  @ViewChild('mainContainer') mainContainer!: ElementRef<HTMLDivElement>;
   globalWindow: any;
   isLoading: boolean = true;
 
@@ -67,6 +68,9 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
       onFieldChanged: (params: any) => {
         this.zone.run(() => this.handleFieldChange());
       },
+      onHide: (response:any): void => {
+        this.zone.run(() => this.handleOnHide(response));
+      },
       onAfterSubmit: (response:any): void => {
           this.zone.run(() => this.handleOnAfterSubmit(response));
       },
@@ -101,6 +105,12 @@ export class GigyaScreenSetComponent implements OnChanges , OnInit{
 
   handleButtonClick(params: any): void {
     this.clickEvent.emit({errorCode: 0, buttonId: params?.button?.buttonID});
+  }
+
+  handleOnHide(response: any): void {
+   if(this.popup !== 'true'){
+     this.mainContainer.nativeElement.innerHTML = '';
+   }
   }
 }
 
