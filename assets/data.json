@@ -49,7 +49,7 @@
       "Fill received SMS and click submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "acc_ver3-RegistrationLogin",
+    "screenSet": "acc_ver3.1-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": [],
@@ -67,7 +67,7 @@
       "Fill the code from the authenticator app and click submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "acc_ver3-RegistrationLogin",
+    "screenSet": "acc_ver3.1-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": [],
@@ -280,7 +280,7 @@
       "Fill the SMS code you got and click Submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "acc_ver3-RegistrationLogin",
+    "screenSet": "acc_ver3.1-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": [],
@@ -296,7 +296,7 @@
       "Fill the TOTP code from your authenticator app and click Submit"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "acc_ver3-RegistrationLogin",
+    "screenSet": "acc_ver3.1-RegistrationLogin",
     "startScreen": "gigya-login-screen",
     "environment": "us1",
     "languages": [],
@@ -588,7 +588,7 @@
       "Click \"Edit\" to change device, set a new device and verify it by ocde"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "acc_ver3-RegistrationLogin",
+    "screenSet": "acc_ver3.1-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": [],
@@ -614,7 +614,7 @@
       "Click \"Change Device\" to change device, scan a new QA code and confirm"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "acc_ver3-RegistrationLogin",
+    "screenSet": "acc_ver3.1-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": [],
@@ -649,7 +649,7 @@
       "Use the code you remembered on previous step to complete login"
     ],
     "apiKey": "4_E2MroaaI0g8OZOhn52APpg",
-    "screenSet": "acc_ver3-RegistrationLogin",
+    "screenSet": "acc_ver3.1-RegistrationLogin",
     "startScreen": "gigya-register-screen",
     "environment": "us1",
     "languages": [],
