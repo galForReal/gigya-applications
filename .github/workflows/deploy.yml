@@ -43,7 +43,7 @@ jobs:
       - name: Debug GitHub Pages Deploy
         run: |
               echo "Current branch: $(git branch --show-current)"
-              echo "GitHub Token is set: ${{ secrets.GH_TOKEN != '' }}"
+              echo "GitHub Token: ${{ secrets.GH_TOKEN }}"
               ls -la ./dist
               ls -la ./dist/gigya-applications/browser/ || echo "Browser folder not found"
 
