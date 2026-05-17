@@ -80,7 +80,8 @@ const routes: Routes = [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     provideTheming({
       defaultTheme: 'sap_horizon'
-    }),],
+    }),
+  ],
   exports: [
     IndexGridComponent
   ],

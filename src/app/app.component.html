@@ -1,18 +1,46 @@
 
 
-<fd-shellbar>
-  <fd-shellbar-logo>
-    <a routerLink="/" class="" aria-label="Home">
-      <img width="48px" src="assets/images/logo.svg" alt="Home" />
-    </a>
-  </fd-shellbar-logo>
-  <fd-shellbar-title> Customer Data Cloud - Test Applications </fd-shellbar-title>
-</fd-shellbar>
+<div class="shellbar-wrapper">
+  <fd-shellbar>
+    <fd-shellbar-logo>
+      <a routerLink="/" class="" aria-label="Home">
+        <img width="48px" src="assets/images/logo.svg" alt="Home" />
+      </a>
+    </fd-shellbar-logo>
+    <fd-shellbar-title> Customer Data Cloud - Test Applications </fd-shellbar-title>
+  </fd-shellbar>
+
+  <button
+    class="info-btn"
+    aria-label="Unsupported accessibility standards"
+    (click)="showDialog = true"
+  >
+    <span class="info-btn__icon">&#9432;</span>
+    <span class="info-btn__label">Unsupported Standards</span>
+  </button>
+</div>
 
 <main class="main">
   <router-outlet/>
 </main>
 
-
-
-
+<div class="modal-backdrop" *ngIf="showDialog" (click)="showDialog = false">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <span id="modal-title" class="modal-title">Unsupported Accessibility Standards</span>
+      <button class="modal-close" aria-label="Close" (click)="showDialog = false">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-subtitle">The following standards are currently not supported:</p>
+      <ul class="standards-list">
+        <li *ngFor="let item of unsupportedStandards" class="standards-list__item">
+          <span class="standards-list__code">{{ item.standard }}</span>
+          <span class="standards-list__reason">{{ item.reason }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-btn-close" (click)="showDialog = false">Close</button>
+    </div>
+  </div>
+</div>

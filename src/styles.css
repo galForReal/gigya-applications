@@ -92,9 +92,6 @@ body {
   border:none !important;
 }
 
-.cdk-visually-hidden{
-  display:none;
-}
 
 .custom-search .fd-input-group {
   height: 42px !important;
